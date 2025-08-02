@@ -1,42 +1,176 @@
+# 🌐 Rohan's 90's Vintage Personal Website
 
-# Academic Pages
+Welcome to my nostalgic tribute to the golden age of the internet! This personal website captures the authentic feel of 90's web design while showcasing modern content and achievements.
 
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
+## 🎯 Project Overview
 
-Academic Pages is a Github Pages template for academic websites.
+This website is a fully functional personal portfolio designed with authentic 90's web aesthetics, featuring:
 
+- **Retro Visual Design**: Neon colors, monospace fonts, ASCII art, and classic 90's UI elements
+- **Nostalgic Features**: Visitor counters, blinking text, marquee scrolling, and "under construction" sections
+- **Modern Content**: Professional experience, research publications, travel blog, and contact information
+- **Interactive Elements**: JavaScript animations, hover effects, and retro sound feedback
 
-# Getting Started
+## 🏗️ Project Structure
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+```
+rohan2810.github.io/
+├── index.html              # Homepage with ASCII art and welcome message
+├── about.html              # Personal background, education, and skills
+├── experience.html         # Professional work history and career timeline
+├── projects.html           # Technical projects and portfolio showcase
+├── publications.html       # Research papers and academic contributions
+├── travel.html             # Travel blog with vintage directory-style layout
+├── contact.html            # Contact form and social media links
+├── css/
+│   ├── main.css           # Core 90's styling and color scheme
+│   └── animations.css     # Retro animations and effects
+├── js/
+│   └── script.js          # Minimal JavaScript for interactivity
+├── images/                # Placeholder for profile photos and graphics
+├── assets/
+│   └── resume.pdf         # Professional resume download
+└── README.md              # This file
+```
 
-See more info at https://academicpages.github.io/
+## 🎨 Design Philosophy
 
-## Running Locally
+### Authentic 90's Elements
+- **Color Palette**: Neon green (#00FF00), cyan (#00FFFF), hot pink (#FF1493), yellow (#FFFF00)
+- **Typography**: Courier New and Monaco monospace fonts
+- **Layout**: Table-based layouts for authentic 90's feel
+- **UI Elements**: Boxy buttons, simple borders, retro form styling
+- **Animations**: Blinking text, neon glow effects, marquee scrolling
 
-When you are initially working your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+### Modern Development Practices
+- Semantic HTML5 structure
+- CSS Grid and Flexbox (used sparingly to maintain authenticity)
+- Responsive design with mobile compatibility
+- Accessible navigation and form elements
+- Clean, maintainable code structure
 
-1. Clone the repository and made updates as detailed above.
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+## 🚀 Features
 
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essentials gcc make`
+### Core Pages
+1. **Homepage**: ASCII art header, visitor counter, navigation menu, latest updates
+2. **About**: Personal background, education timeline, technical skills matrix
+3. **Experience**: Professional timeline, detailed work history, performance metrics
+4. **Projects**: Technical portfolio with project showcases and GitHub links
+5. **Publications**: Research papers with academic formatting and status indicators
+6. **Travel**: Vintage-style travel blog with photo galleries and future plans
+7. **Contact**: Professional contact form, social media links, meeting scheduler
 
-# Maintenance 
+### Interactive Elements
+- Fake visitor counter with daily updates
+- Hover effects on buttons and links
+- CSS animations (blinking, neon glow, pulse effects)
+- Form validation with retro alert styling
+- Easter egg: Konami code activation
+- Matrix-style background effects
 
-Bug reports and feature requests to the template  should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+### Responsive Design
+- Mobile-friendly layout while maintaining retro aesthetic
+- Scalable typography and imagery
+- Touch-friendly navigation for mobile devices
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+## 🛠️ Technical Implementation
 
-## Bugfixes and enhancements
+### Frontend Technologies
+- **HTML5**: Semantic markup with retro styling
+- **CSS3**: Custom properties, grid layouts, animations
+- **Vanilla JavaScript**: Minimal dependencies, authentic feel
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
+### Key Features
+- Pure CSS animations (no external libraries)
+- Form validation and submission handling
+- Local storage for visitor counter persistence
+- Keyboard shortcuts and accessibility features
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+## 🎮 Easter Eggs & Fun Features
+
+- **Konami Code**: Try the classic cheat code for a surprise!
+- **Matrix Background**: Subtle animated characters
+- **Glitch Effects**: Random visual glitches for authenticity
+- **Sound Effects**: Visual feedback for button interactions
+- **Fake System Info**: Retro computer specifications display
+
+## 📱 Browser Compatibility
+
+Optimized for modern browsers while maintaining that classic 90's feel:
+- Chrome 80+
+- Firefox 70+
+- Safari 13+
+- Edge 80+
+
+*Note: Best viewed in 1024x768 resolution with 256 colors for the full retro experience!*
+
+## 🚀 Deployment
+
+This website is designed to be deployed on GitHub Pages:
+
+1. Fork this repository
+2. Enable GitHub Pages in repository settings
+3. Set source to main branch
+4. Visit your site at `https://yourusername.github.io/repository-name`
+
+## 🎯 Customization Guide
+
+### Colors
+Edit CSS custom properties in `css/main.css`:
+```css
+:root {
+  --bg-primary: #000000;
+  --text-primary: #00ff00;
+  --accent: #ff1493;
+  /* Add your colors here */
+}
+```
+
+### Content
+- Update personal information in each HTML file
+- Replace placeholder images in `/images/` directory
+- Modify the resume PDF in `/assets/`
+- Customize the ASCII art in `index.html`
+
+### Features
+- Add new sections to existing pages
+- Create additional blog posts in the travel section
+- Extend the JavaScript functionality in `js/script.js`
+
+## 📜 Inspiration & References
+
+This project pays homage to:
+- Classic 90's personal websites and GeoCities pages
+- Retro computing aesthetics and terminal interfaces
+- Early internet culture and web design trends
+- The nostalgic charm of "Web 1.0" era
+
+## 🤝 Contributing
+
+While this is a personal website, I welcome:
+- Bug reports and fixes
+- Suggestions for retro features
+- Accessibility improvements
+- Performance optimizations
+
+## 📄 License
+
+This project is open source and available under the MIT License. Feel free to use it as inspiration for your own retro website!
+
+## 🎉 Acknowledgments
+
+- Inspired by the creativity of early web developers
+- Thanks to the web design community for keeping retro aesthetics alive
+- Special appreciation for anyone who remembers dial-up internet sounds
+
+---
+
+*Made with 💾 and nostalgia by Rohan Surana*
+
+**System Requirements**: Netscape Navigator 4.0+ or Internet Explorer 4.0+  
+**Y2K Compliant**: ✅ Fully tested and verified  
+**Last Updated**: December 2024
+
+---
+
+🌟 **Don't forget to visit the [live website](https://rohan2810.github.io) for the full retro experience!** 🌟

@@ -1,0 +1,269 @@
+/* 90's Vintage Personal Website - Main Styles */
+
+/* 90's Color Scheme */
+:root {
+  --bg-primary: #000000;
+  --bg-secondary: #1a1a1a;
+  --text-primary: #00ff00;
+  --text-secondary: #00ffff;
+  --accent: #ff1493;
+  --warning: #ffff00;
+  --border-color: #00ff00;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', 'Monaco', monospace;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.4;
+  font-size: 14px;
+  padding: 20px;
+}
+
+/* Typography */
+h1 {
+  color: var(--accent);
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  border: 2px solid var(--accent);
+  padding: 10px;
+  text-align: center;
+}
+
+h2 {
+  color: var(--text-secondary);
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 20px 0 10px 0;
+  border-bottom: 1px solid var(--text-secondary);
+  padding-bottom: 5px;
+}
+
+h3 {
+  color: var(--warning);
+  font-size: 16px;
+  margin: 15px 0 8px 0;
+}
+
+p {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Links */
+a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--warning);
+  text-shadow: 0 0 8px var(--warning);
+}
+
+a:visited {
+  color: var(--accent);
+}
+
+/* Navigation */
+.nav-container {
+  border: 2px solid var(--border-color);
+  padding: 15px;
+  margin-bottom: 30px;
+  background: var(--bg-secondary);
+}
+
+.nav-menu {
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.nav-menu a {
+  color: var(--text-primary);
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  display: inline-block;
+}
+
+.nav-menu a:hover {
+  border: 1px solid var(--text-primary);
+  background: var(--bg-primary);
+  color: var(--warning);
+}
+
+.nav-menu a.active {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+/* Retro Elements */
+.blink {
+  animation: blink 1s infinite;
+}
+
+.neon {
+  text-shadow: 0 0 10px currentColor;
+}
+
+.retro-border {
+  border: 2px solid var(--text-primary);
+  padding: 15px;
+  margin: 20px 0;
+  background: var(--bg-secondary);
+}
+
+.retro-button {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 2px solid var(--text-primary);
+  padding: 8px 16px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.retro-button:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  box-shadow: 0 0 15px var(--text-primary);
+}
+
+/* Tables (90's style) */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+  border: 2px solid var(--text-primary);
+}
+
+th, td {
+  border: 1px solid var(--text-secondary);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th {
+  background: var(--bg-secondary);
+  color: var(--warning);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background: var(--bg-secondary);
+}
+
+/* Content Sections */
+.section {
+  margin-bottom: 30px;
+  border: 1px solid var(--text-secondary);
+  padding: 20px;
+  background: var(--bg-secondary);
+}
+
+.profile-section {
+  text-align: center;
+  border: 2px solid var(--accent);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.profile-photo {
+  border: 3px solid var(--text-primary);
+  max-width: 200px;
+  height: auto;
+  margin: 10px 0;
+}
+
+/* Lists */
+ul, ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Footer */
+.footer {
+  border-top: 2px solid var(--text-primary);
+  padding-top: 20px;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+/* Visitor Counter */
+.visitor-counter {
+  background: var(--bg-primary);
+  border: 2px solid var(--warning);
+  padding: 10px;
+  text-align: center;
+  color: var(--warning);
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/* ASCII Art Container */
+.ascii-art {
+  font-family: monospace;
+  white-space: pre;
+  text-align: center;
+  color: var(--text-primary);
+  font-size: 12px;
+  line-height: 1;
+  margin: 20px 0;
+}
+
+/* Under Construction */
+.under-construction {
+  background: var(--warning);
+  color: var(--bg-primary);
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid var(--accent);
+  margin: 10px 0;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Responsive (minimal for authentic feel) */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .nav-menu a {
+    margin: 5px;
+    display: block;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+}
