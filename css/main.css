@@ -1,291 +1,134 @@
-:root {
-    --sidebar-bg: #88b99a; /* Sage green inspired by the reference */
-    --sidebar-text: #ffffff;
-    --content-bg: #ffffff;
-    --text-color: #333;
-    --heading-color: #111;
-    --link-color: #2c5e40;
-    --link-hover: #74a586;
-    --border-color: #eee;
-}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* ... existing styles ... */
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--content-bg);
+/* Paper Row Layout */
+.paper-row {
     display: flex;
-    min-height: 100vh;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-/* Sidebar Styles */
-.sidebar {
-    width: 280px;
-    background-color: var(--sidebar-bg);
-    color: var(--sidebar-text);
-    padding: 40px 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Left aligned like Shirley's */
-    position: fixed;
-    height: 100vh;
-    overflow-y: auto;
-    left: 0;
-    top: 0;
-    z-index: 1000;
-}
-
-.profile-img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 30px;
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    align-self: center;
-}
-
-.nav-menu {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.nav-item {
-    color: rgba(255, 255, 255, 0.95);
-    text-decoration: none;
-    font-size: 1.05rem;
-    font-weight: 500;
-    padding: 8px 0;
-    transition: opacity 0.2s;
+.paper-thumb {
+    flex-shrink: 0;
+    width: 150px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
 }
 
-.nav-item:before {
-    content: "o";
-    margin-right: 10px;
-    font-size: 0.7em;
-    opacity: 0.6;
-    visibility: hidden;
-}
-
-.nav-item:hover:before, .nav-item.active:before {
-    visibility: visible;
-}
-
-.nav-item:hover, .nav-item.active {
-    opacity: 1;
-    font-weight: 600;
-}
-
-.social-links {
-    margin-top: auto;
-    display: flex;
-    gap: 15px;
-    padding-top: 30px;
-    align-self: center;
-}
-
-.social-link {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.1rem;
-    text-decoration: none;
-    transition: transform 0.2s;
-}
-
-.social-link:hover {
-    transform: scale(1.1);
-    color: #fff;
-}
-
-/* Main Content Styles */
-.main-content {
-    margin-left: 280px;
-    padding: 60px 80px;
-    max-width: 1000px; /* Limit width for readability */
+.paper-img-thumb {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #222;
+.paper-content {
+    flex-grow: 1;
 }
 
-h2 {
-    font-size: 1.5rem;
-    border-bottom: 2px solid var(--sidebar-bg);
-    padding-bottom: 8px;
-    margin-top: 50px;
-    margin-bottom: 25px;
-    color: #222;
+.paper-desc {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.paper-link {
     display: inline-block;
-    padding-right: 20px;
+    background-color: var(--sidebar-bg);
+    color: #fff !important;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    margin-top: 8px;
 }
 
-.subtitle {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 30px;
-    font-weight: 400;
-}
-
-a {
-    color: var(--link-color);
+.paper-link:hover {
+    background-color: var(--link-hover);
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Projects Grid Layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack on mobile */
+    gap: 30px;
 }
 
-/* Updates List */
-.updates-list {
-    list-style: none;
+@media (min-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Keep stacked for detail view or change to 2 cols if preferred */
+    }
 }
 
-.update-item {
-    margin-bottom: 12px;
-    font-size: 0.95rem;
-}
-
-.update-date {
-    font-weight: 700;
-    color: #d9534f; /* Reddish color for dates as seen in some academic sites, or stick to theme */
-    color: var(--link-color);
-    margin-right: 8px;
-}
-
-/* Publications */
-.paper-item {
-    margin-bottom: 25px;
-}
-
-.paper-title {
-    font-weight: 600;
-    font-size: 1.05rem;
-    color: #000;
-    margin-bottom: 4px;
-}
-
-.paper-authors {
-    color: #555;
-    font-size: 0.95rem;
-    margin-bottom: 4px;
-}
-
-.paper-venue {
-    font-style: italic;
-    color: #222;
-    font-weight: 500;
-    font-size: 0.95rem;
-}
-
-/* Experience & Education */
-.experience-item {
-    margin-bottom: 30px;
-}
-
-.exp-header {
+.project-card {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 5px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-.exp-role {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #222;
+@media (min-width: 768px) {
+    .project-card {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 }
 
-.exp-company {
-    font-weight: 600;
-    color: #444;
-    display: block;
-    margin-bottom: 5px;
+.project-thumb {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 250px;
+    height: 160px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #eee;
 }
 
-.exp-date {
+.project-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    flex-grow: 1;
+}
+
+.tech-stack {
+    font-size: 0.9rem;
     color: #666;
-    font-size: 0.95rem;
-    font-style: italic;
+    margin-bottom: 10px;
+    font-family: monospace;
+    background: #f5f5f5;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
 }
 
-.exp-list {
-    margin-left: 20px;
-    margin-top: 8px;
-    list-style-type: disc;
-}
-
-.exp-list li {
-    margin-bottom: 6px;
-    color: #444;
-    font-size: 0.95rem;
-}
-
-/* Skills */
-.skills-list {
-    list-style: none;
-}
-.skills-list li {
-    margin-bottom: 8px;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 850px) {
-    body {
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .paper-row {
         flex-direction: column;
     }
-    
-    .sidebar {
+    .paper-thumb {
         width: 100%;
-        height: auto;
-        position: relative;
-        padding: 30px 20px;
-        align-items: center;
+        height: 150px;
     }
     
-    .main-content {
-        margin-left: 0;
-        padding: 30px 20px;
-    }
-    
-    .nav-menu {
-        align-items: center;
-        margin-bottom: 20px;
-    }
-    
-    .nav-item:before {
-        display: none; /* Hide bullet on mobile for cleaner look */
-    }
-
-    .profile-img {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .exp-header {
+    .project-card {
         flex-direction: column;
     }
-    
-    .exp-date {
-        margin-top: 2px;
+    .project-thumb {
+        max-width: 100%;
+        height: 200px;
     }
 }
-

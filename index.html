@@ -85,114 +85,177 @@
         <section id="research">
             <h2>Research Topics</h2>
             
-            <!-- Category 1 -->
-            <h3 style="font-size: 1.2rem; color: var(--sidebar-bg); margin-top: 30px; margin-bottom: 15px; font-weight: 600;">LLM alignment and post-training (w. Adobe)</h3>
+            <!-- Tabs -->
+            <div class="research-tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'llm')">LLM Alignment & Post-training</button>
+                <button class="tab-btn" onclick="openTab(event, 'ir')">IR & Recommendation</button>
+                <button class="tab-btn" onclick="openTab(event, 'multimodal')">Multimodal Learning</button>
+            </div>
 
-            <div class="paper-item">
-                <div class="paper-title">MASS-DPO: Multi-Negative Active Sample Selection for Direct Policy Optimization</div>
-                <div class="paper-authors"><strong>Rohan Surana*</strong>, J. Wu*, X. Li, Y. Shen, C. Wang, T. Yu, P. Ammanabrolu, J. Shang, J. McAuley</div>
-                <div class="paper-venue">Under Review - ICLR 2026 (Score: 5.5)</div>
-                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
-                    We cast multi-negative DPO under the Plackett–Luce model as a D-optimal design problem and develop a greedy, theoretically grounded selection strategy for informative negatives. This improves alignment efficiency and performance.
-                </p>
-                <div style="margin-top: 5px;">
-                    <a href="https://openreview.net/pdf?id=gFtdK7pwHg" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
+            <!-- Tab Content: LLM -->
+            <div id="llm" class="tab-content active">
+                <div class="paper-item">
+                    <div class="paper-row">
+                        <div class="paper-thumb">
+                            <img src="images/mass-dpo.jpg" onerror="this.style.display='none'" alt="MASS-DPO" class="paper-img-thumb">
+                        </div>
+                        <div class="paper-content">
+                            <div class="paper-title">MASS-DPO: Multi-Negative Active Sample Selection for Direct Policy Optimization</div>
+                            <div class="paper-authors"><strong>Rohan Surana*</strong>, J. Wu*, X. Li, Y. Shen, C. Wang, T. Yu, P. Ammanabrolu, J. Shang, J. McAuley</div>
+                            <div class="paper-venue">Under Review - ICLR 2026 (Score: 5.5)</div>
+                            <p class="paper-desc">
+                                We cast multi-negative DPO under the Plackett–Luce model as a D-optimal design problem and develop a greedy, theoretically grounded selection strategy for informative negatives. This improves alignment efficiency and performance.
+                            </p>
+                            <div style="margin-top: 5px;">
+                                <a href="https://openreview.net/pdf?id=gFtdK7pwHg" target="_blank" class="paper-link">[PDF]</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                     <div class="paper-row">
+                        <div class="paper-thumb">
+                            <img src="images/irpo.jpg" onerror="this.style.display='none'" alt="IRPO" class="paper-img-thumb">
+                        </div>
+                         <div class="paper-content">
+                            <div class="paper-title">In-context Ranking Preference Optimization (IRPO)</div>
+                            <div class="paper-authors">J. Wu*, <strong>Rohan Surana*</strong>, Z. Xie, Y. Shen, Y. Xia, T. Yu, R. Rossi, P. Ammanabrolu, J. McAuley</div>
+                            <div class="paper-venue">COLM 2025</div>
+                            <p class="paper-desc">
+                                We extend Direct Preference Optimization to ranking, allowing LLMs to learn from sparse, in-context listwise feedback and directly optimize differentiable surrogates of ranking metrics. This connects preference optimization with practical IR settings like conversational recommendation and generative retrieval.
+                            </p>
+                            <div style="margin-top: 5px;">
+                                <a href="https://arxiv.org/pdf/2504.15477" target="_blank" class="paper-link">[PDF]</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-row">
+                        <div class="paper-thumb">
+                            <img src="images/misp-dpo.jpg" onerror="this.style.display='none'" alt="MISP-DPO" class="paper-img-thumb">
+                        </div>
+                        <div class="paper-content">
+                            <div class="paper-title">Importance Sampling for Multi-Negative Multimodal Direct Preference Optimization (MISP-DPO)</div>
+                            <div class="paper-authors"><strong>Rohan Surana (Co-author)</strong>, et al.</div>
+                            <div class="paper-venue">Under Review - ICLR 2026</div>
+                            <p class="paper-desc">
+                                We extend multi-negative DPO to the multimodal setting, using a CLIP+SAE-based sampler and importance sampling under a Plackett–Luce objective to select semantically diverse visual negatives. This substantially improves multimodal alignment and reduces hallucinations compared to single-negative multimodal DPO baselines.
+                            </p>
+                            <div style="margin-top: 5px;">
+                                <a href="https://openreview.net/pdf?id=HEFPwoGtTj" target="_blank" class="paper-link">[PDF]</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="paper-item">
-                <div class="paper-title">In-context Ranking Preference Optimization (IRPO)</div>
-                <div class="paper-authors">J. Wu*, <strong>Rohan Surana*</strong>, Z. Xie, Y. Shen, Y. Xia, T. Yu, R. Rossi, P. Ammanabrolu, J. McAuley</div>
-                <div class="paper-venue">COLM 2025</div>
-                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
-                    We extend Direct Preference Optimization to ranking, allowing LLMs to learn from sparse, in-context listwise feedback and directly optimize differentiable surrogates of ranking metrics. This connects preference optimization with practical IR settings like conversational recommendation and generative retrieval.
-                </p>
-                <div style="margin-top: 5px;">
-                    <a href="https://arxiv.org/pdf/2504.15477" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
+            <!-- Tab Content: IR -->
+            <div id="ir" class="tab-content">
+                <div class="paper-item">
+                    <div class="paper-row">
+                        <div class="paper-thumb">
+                             <img src="images/crs-syn.jpg" onerror="this.style.display='none'" alt="CRS Synthesis" class="paper-img-thumb">
+                        </div>
+                        <div class="paper-content">
+                            <div class="paper-title">From Reviews to Dialogues: Active Synthesis for Zero-Shot LLM-based Conversational Recommender System</div>
+                            <div class="paper-authors"><strong>Rohan Surana (First author)</strong>, et al.</div>
+                            <div class="paper-venue">In preparation (ACL)</div>
+                            <p class="paper-desc">
+                                Joint work with Netflix where we design an active data augmentation framework that turns static domain data (reviews, metadata, collaborative signals) into synthetic conversations using black-box LLMs, enabling smaller in-house CRS models to operate in true zero-/low-resource settings.
+                            </p>
+                            <div style="margin-top: 5px;">
+                                <a href="https://arxiv.org/pdf/2504.15476" target="_blank" class="paper-link">[PDF]</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-row">
+                        <div class="paper-thumb">
+                             <img src="images/musicrs.jpg" onerror="this.style.display='none'" alt="MusiCRS" class="paper-img-thumb">
+                        </div>
+                        <div class="paper-content">
+                            <div class="paper-title">MusiCRS: Benchmarking Audio-Centric Conversational Recommendation</div>
+                            <div class="paper-authors"><strong>Rohan Surana*</strong>, A. Namburi*, G. Mundada*, A. Lal*, Z. Novack, J. McAuley, J. Wu</div>
+                            <div class="paper-venue">Under Review - ICASSP</div>
+                            <p class="paper-desc">
+                                We build the first benchmark that ties real conversational queries to actual music tracks, enabling evaluation across audio-only, text-only, and audio+text settings. This exposes how current CRS models over-rely on text and struggle with nuanced audio reasoning.
+                            </p>
+                            <div style="margin-top: 5px;">
+                                <a href="https://arxiv.org/pdf/2509.19469" target="_blank" class="paper-link">[PDF]</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                     <div class="paper-title">Active Data Distillation for Zero-shot LLM CRS</div>
+                    <div class="paper-authors"><strong>Rohan Surana*</strong>, J. Wu*, Z. Xie*, Y. Xia, H. Steck, D. Liang, N. Kallus, J. McAuley</div>
+                    <div class="paper-venue">Under Review - WSDM 2026</div>
                 </div>
             </div>
 
-            <div class="paper-item">
-                <div class="paper-title">Importance Sampling for Multi-Negative Multimodal Direct Preference Optimization (MISP-DPO)</div>
-                <div class="paper-authors"><strong>Rohan Surana (Co-author)</strong>, et al.</div>
-                <div class="paper-venue">Under Review - ICLR 2026</div>
-                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
-                    We extend multi-negative DPO to the multimodal setting, using a CLIP+SAE-based sampler and importance sampling under a Plackett–Luce objective to select semantically diverse visual negatives. This substantially improves multimodal alignment and reduces hallucinations compared to single-negative multimodal DPO baselines.
-                </p>
-                <div style="margin-top: 5px;">
-                    <a href="https://openreview.net/pdf?id=HEFPwoGtTj" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
+            <!-- Tab Content: Multimodal -->
+            <div id="multimodal" class="tab-content">
+                <div class="paper-item">
+                    <div class="paper-row">
+                        <div class="paper-thumb">
+                             <img src="images/traceable-mllm.jpg" onerror="this.style.display='none'" alt="Traceable MLLM" class="paper-img-thumb">
+                        </div>
+                        <div class="paper-content">
+                            <div class="paper-title">Traceable and Explainable Multimodal Large Language Models: An Information-Theoretic View</div>
+                            <div class="paper-authors">Z. Huang, J. Wu, <strong>Rohan Surana</strong>, R. Jain, T. Yu, R. Addanki, D. Arbour, S. Kim, J. McAuley</div>
+                            <div class="paper-venue">COLM 2025</div>
+                            <p class="paper-desc">
+                                We propose an information-theoretic framework (via a concept bottleneck and mutual-information-style measures) to make MLLMs more traceable: quantifying how much visual information is retained, transformed, or discarded as it flows through the model under different textual instructions.
+                            </p>
+                            <div style="margin-top: 5px;">
+                                <a href="https://openreview.net/pdf?id=pQm66IPmeE" target="_blank" class="paper-link">[PDF]</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Category 2 -->
-            <h3 style="font-size: 1.2rem; color: var(--sidebar-bg); margin-top: 30px; margin-bottom: 15px; font-weight: 600;">Information retrieval and recommendation (w. Netflix, Adobe)</h3>
-
-            <div class="paper-item">
-                <div class="paper-title">From Reviews to Dialogues: Active Synthesis for Zero-Shot LLM-based Conversational Recommender System</div>
-                <div class="paper-authors"><strong>Rohan Surana (First author)</strong>, et al.</div>
-                <div class="paper-venue">In preparation (ACL)</div>
-                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
-                    Joint work with Netflix where we design an active data augmentation framework that turns static domain data (reviews, metadata, collaborative signals) into synthetic conversations using black-box LLMs, enabling smaller in-house CRS models to operate in true zero-/low-resource settings.
-                </p>
-                <div style="margin-top: 5px;">
-                    <a href="https://arxiv.org/pdf/2504.15476" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
+                <div class="paper-item">
+                    <div class="paper-row">
+                        <div class="paper-thumb">
+                             <img src="images/image-diff.jpg" onerror="this.style.display='none'" alt="Image Diff Captioning" class="paper-img-thumb">
+                        </div>
+                        <div class="paper-content">
+                            <div class="paper-title">Image Difference Captioning via Adversarial Preference Optimization</div>
+                            <div class="paper-authors">Z. Huang, J. Wu, <strong>Rohan Surana</strong>, T. Yu, D. Arbour, R. Sinha, J. McAuley</div>
+                            <div class="paper-venue">EMNLP 2025</div>
+                            <p class="paper-desc">
+                                We formulate image difference captioning as a preference-optimization problem and introduce an adversarial hard-negative retriever plus DPO-style training to better capture fine-grained visual differences. This combines multimodal reasoning with preference-based training.
+                            </p>
+                            <div style="margin-top: 5px;">
+                                <a href="https://aclanthology.org/2025.emnlp-main.1713.pdf" target="_blank" class="paper-link">[PDF]</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="paper-item">
-                <div class="paper-title">MusiCRS: Benchmarking Audio-Centric Conversational Recommendation</div>
-                <div class="paper-authors"><strong>Rohan Surana*</strong>, A. Namburi*, G. Mundada*, A. Lal*, Z. Novack, J. McAuley, J. Wu</div>
-                <div class="paper-venue">Under Review - ICASSP</div>
-                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
-                    We build the first benchmark that ties real conversational queries to actual music tracks, enabling evaluation across audio-only, text-only, and audio+text settings. This exposes how current CRS models over-rely on text and struggle with nuanced audio reasoning.
-                </p>
-                <div style="margin-top: 5px;">
-                    <a href="https://arxiv.org/pdf/2509.19469" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
-                </div>
-            </div>
-
-            <div class="paper-item">
-                <div class="paper-title">Active Data Distillation for Zero-shot LLM CRS</div>
-                <div class="paper-authors"><strong>Rohan Surana*</strong>, J. Wu*, Z. Xie*, Y. Xia, H. Steck, D. Liang, N. Kallus, J. McAuley</div>
-                <div class="paper-venue">Under Review - WSDM 2026</div>
-            </div>
-
-            <!-- Category 3 -->
-            <h3 style="font-size: 1.2rem; color: var(--sidebar-bg); margin-top: 30px; margin-bottom: 15px; font-weight: 600;">Multimodal learning</h3>
-
-            <div class="paper-item">
-                <div class="paper-title">Traceable and Explainable Multimodal Large Language Models: An Information-Theoretic View</div>
-                <div class="paper-authors">Z. Huang, J. Wu, <strong>Rohan Surana</strong>, R. Jain, T. Yu, R. Addanki, D. Arbour, S. Kim, J. McAuley</div>
-                <div class="paper-venue">COLM 2025</div>
-                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
-                    We propose an information-theoretic framework (via a concept bottleneck and mutual-information-style measures) to make MLLMs more traceable: quantifying how much visual information is retained, transformed, or discarded as it flows through the model under different textual instructions.
-                </p>
-                <div style="margin-top: 5px;">
-                    <a href="https://openreview.net/pdf?id=pQm66IPmeE" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
-                </div>
-            </div>
-
-            <div class="paper-item">
-                <div class="paper-title">Image Difference Captioning via Adversarial Preference Optimization</div>
-                <div class="paper-authors">Z. Huang, J. Wu, <strong>Rohan Surana</strong>, T. Yu, D. Arbour, R. Sinha, J. McAuley</div>
-                <div class="paper-venue">EMNLP 2025</div>
-                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
-                    We formulate image difference captioning as a preference-optimization problem and introduce an adversarial hard-negative retriever plus DPO-style training to better capture fine-grained visual differences. This combines multimodal reasoning with preference-based training.
-                </p>
-                <div style="margin-top: 5px;">
-                    <a href="https://aclanthology.org/2025.emnlp-main.1713.pdf" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
-                </div>
-            </div>
-
-            <div class="paper-item">
-                <div class="paper-title">AMPS: Adaptive Modality Preference Steering via Functional Entropy</div>
-                <div class="paper-authors"><strong>Rohan Surana (Co-author)</strong>, et al.</div>
-                <div class="paper-venue">Under Review - ICLR 2026</div>
-                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
-                    We study modality preference in MLLMs (e.g., over-reliance on text vs. images) and propose an entropy-based diagnostic plus a sample-wise steering mechanism that adjusts steering intensity per input to avoid generation collapse while still shifting modality usage in a controlled way.
-                </p>
-                <div style="margin-top: 5px;">
-                    <a href="https://openreview.net/pdf?id=XekKGk5Fcd" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
+                <div class="paper-item">
+                    <div class="paper-row">
+                        <div class="paper-thumb">
+                             <img src="images/amps.jpg" onerror="this.style.display='none'" alt="AMPS" class="paper-img-thumb">
+                        </div>
+                        <div class="paper-content">
+                            <div class="paper-title">AMPS: Adaptive Modality Preference Steering via Functional Entropy</div>
+                            <div class="paper-authors"><strong>Rohan Surana (Co-author)</strong>, et al.</div>
+                            <div class="paper-venue">Under Review - ICLR 2026</div>
+                            <p class="paper-desc">
+                                We study modality preference in MLLMs (e.g., over-reliance on text vs. images) and propose an entropy-based diagnostic plus a sample-wise steering mechanism that adjusts steering intensity per input to avoid generation collapse while still shifting modality usage in a controlled way.
+                            </p>
+                            <div style="margin-top: 5px;">
+                                <a href="https://openreview.net/pdf?id=XekKGk5Fcd" target="_blank" class="paper-link">[PDF]</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -203,10 +266,22 @@
 
             <div class="experience-item">
                 <div class="exp-header">
+                    <span class="exp-role">Graduate Teaching Assistant</span>
+                    <span class="exp-date">Mar 2025 – Present</span>
+                </div>
+                <span class="exp-company">UC San Diego <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| San Diego, CA</span></span>
+                <ul class="exp-list">
+                    <li>Teaching Assistant, CSE 258: Web Mining and Recommender Systems (Sep 2025 - Present)</li>
+                    <li>Teaching Assistant, CSE 153: Machine Learning for Music (Mar 2025 - Sep 2025)</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
                     <span class="exp-role">AI Research Intern</span>
                     <span class="exp-date">June 2025 – Sept 2025</span>
                 </div>
-                <span class="exp-company">Dell Technologies</span>
+                <span class="exp-company">Dell Technologies <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| Hopkinton, MA</span></span>
                 <ul class="exp-list">
                     <li>Built multi-agent LLM system (LangGraph/LangChain + vLLM) with request batching and KV-cache, cutting p95 latency by 40%.</li>
                     <li>Designed scalable RAG pipelines integrating LLMs with vector databases using hybrid search and intelligent chunking strategies.</li>
@@ -220,7 +295,7 @@
                     <span class="exp-role">Software Engineer II</span>
                     <span class="exp-date">Mar 2024 – Aug 2024</span>
                 </div>
-                <span class="exp-company">Dell Technologies</span>
+                <span class="exp-company">Dell Technologies <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| Santa Clara, CA</span></span>
                 <ul class="exp-list">
                     <li>Architected TOSCA-based framework to orchestrate resources, cutting provisioning time 30% and improving infrastructure flexibility.</li>
                     <li>Built real-time infrastructure digital twin with predictive analytics using graph databases to enable drift detection and safe remediation.</li>
@@ -234,7 +309,7 @@
                     <span class="exp-role">Software Engineer I</span>
                     <span class="exp-date">Jul 2022 – Mar 2024</span>
                 </div>
-                <span class="exp-company">Dell Technologies</span>
+                <span class="exp-company">Dell Technologies <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| Santa Clara, CA</span></span>
                 <ul class="exp-list">
                     <li>Accelerated cluster time-to-ready by 20% through automated Kubernetes operators supporting GPU workloads, KServe, and TorchServe.</li>
                     <li>Enhanced service performance by redesigning API and proto services with gRPC, leading a 4-intern team to boost efficiency 15%.</li>
@@ -243,15 +318,52 @@
                 </ul>
             </div>
 
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Machine Learning Researcher</span>
+                    <span class="exp-date">Aug 2021 – May 2022</span>
+                </div>
+                <span class="exp-company">Spartan Superway <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| San Jose, CA</span></span>
+                <ul class="exp-list">
+                    <li>Conducted research on machine learning applications for autonomous transportation systems.</li>
+                    <li>Built end-to-end real-time vehicle detection & tracking (YOLOv5+BiLSTM+OpenCV) with predictive analytics; achieved 0.45 RMSE.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Teaching Assistant & Tutor</span>
+                    <span class="exp-date">Jan 2020 – May 2022</span>
+                </div>
+                <span class="exp-company">San Jose State University <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| San Jose, CA</span></span>
+                <ul class="exp-list">
+                    <li><strong>Peer Tutor (CS):</strong> SJSU Peer Connections (Jan 2022 - May 2022)</li>
+                    <li><strong>Teaching Assistant (CS46B):</strong> Introduction to Data Structures (Aug 2021 - May 2022)</li>
+                    <li><strong>Teaching Assistant (CS149):</strong> Operating Systems (Aug 2021 - Jan 2022)</li>
+                    <li><strong>Math Workshop Facilitator:</strong> Calculus II (Jan 2020 - Aug 2021)</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Open Source Developer</span>
+                    <span class="exp-date">Feb 2021 – Mar 2021</span>
+                </div>
+                <span class="exp-company">The Apache Software Foundation <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| Remote</span></span>
+                <ul class="exp-list">
+                    <li>Contributed to the Apache Tika project, enhancing file detection and content analysis capabilities.</li>
+                </ul>
+            </div>
+
              <div class="experience-item">
                 <div class="exp-header">
                     <span class="exp-role">Software Developer Intern</span>
                     <span class="exp-date">May 2020 – Aug 2020</span>
                 </div>
-                <span class="exp-company">Confluxsys LLC</span>
+                <span class="exp-company">Confluxsys LLC <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| Menlo Park, CA</span></span>
                 <ul class="exp-list">
-                    <li>Built modules using Spark, Scala, & GNNs improving pipeline throughput 25% unlocking analytics for healthcare & finance clients.</li>
-                    <li>Created data-mining utilities using DataStax libraries; reduced job runtimes 45% and standardized ETL for downstream ML features.</li>
+                    <li>Developed "Reward Distribution" & "Role Miner" modules using Spark libraries, increasing performance by 25%.</li>
+                    <li>Designed data mining tools with Spark and Scala, boosting performance by 45% and streamlining workflows with DataStax libraries.</li>
                 </ul>
             </div>
         </section>
@@ -260,22 +372,33 @@
         <section id="education">
             <h2>Education</h2>
             
-             <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">Masters of Science in Data Science</span>
-                    <span class="exp-date">March 2026</span>
+            <div class="education-grid">
+                <!-- UCSD -->
+                <div class="edu-card">
+                    <div class="edu-logo-placeholder">
+                         <img src="images/ucsd-logo.png" alt="UCSD Logo" onerror="this.style.display='none'; this.parentNode.innerText='UCSD'">
+                    </div>
+                    <div class="edu-school">University of California, San Diego</div>
+                    <div class="edu-period">Sept. 2024 - Mar. 2026 (Expected)</div>
+                    <div class="edu-details">
+                        <p><strong>Masters of Science in Data Science</strong></p>
+                        <p>GPA: 3.88/4.00</p>
+                        <p>Advisor: <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank">Prof. Julian McAuley</a></p>
+                    </div>
                 </div>
-                <span class="exp-company">University of California, San Diego (UCSD)</span>
-                <div>GPA: 3.88/4.00 | Advisor: Julian McAuley</div>
-            </div>
 
-             <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">Bachelor of Science in Software Engineering</span>
-                    <span class="exp-date">May 2022</span>
+                <!-- SJSU -->
+                <div class="edu-card">
+                    <div class="edu-logo-placeholder">
+                         <img src="images/sjsu-logo.png" alt="SJSU Logo" onerror="this.style.display='none'; this.parentNode.innerText='SJSU'">
+                    </div>
+                    <div class="edu-school">San Jose State University</div>
+                    <div class="edu-period">Aug. 2018 - May 2022</div>
+                    <div class="edu-details">
+                        <p><strong>Bachelor of Science in Software Engineering</strong></p>
+                        <p>GPA: 3.87/4.00 (Summa Cum Laude)</p>
+                    </div>
                 </div>
-                <span class="exp-company">San Jose State University</span>
-                <div>GPA: 3.87/4.00 (Summa cum laude)</div>
             </div>
         </section>
 
@@ -283,28 +406,42 @@
         <section id="projects">
             <h2>Projects</h2>
             
-            <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">Privacy-Preserving LLM Training with Synthetic Data</span>
-                    <span class="exp-date">Sept 2024 – Dec 2024</span>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                     <div class="project-thumb">
+                        <img src="images/proj-llm-privacy.jpg" onerror="this.style.display='none'" alt="Privacy Preserving LLM">
+                     </div>
+                     <div class="project-content">
+                        <div class="exp-header">
+                            <span class="exp-role">Privacy-Preserving LLM Training with Synthetic Data</span>
+                            <span class="exp-date">Sept 2024 – Dec 2024</span>
+                        </div>
+                        <div class="tech-stack"><em>CrewAI, Unsloth, PyTorch, Llama-2</em></div>
+                        <ul class="exp-list">
+                            <li>Designed a multi-agent data-generation framework with CrewAI for persona generation and PII masking to produce PII-safe corpora.</li>
+                            <li>Fine-tuned 2 OSS LLMs via PEFT (Unsloth) to 99% PII removal and built 270-Q eval benchmark for model assessment.</li>
+                        </ul>
+                     </div>
                 </div>
-                <div><em>CrewAI, Unsloth, PyTorch, Llama-2</em></div>
-                <ul class="exp-list">
-                    <li>Designed a multi-agent data-generation framework with CrewAI for persona generation and PII masking to produce PII-safe corpora.</li>
-                    <li>Fine-tuned 2 OSS LLMs via PEFT (Unsloth) to 99% PII removal and built 270-Q eval benchmark for model assessment.</li>
-                </ul>
-            </div>
 
-             <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">Autonomous Transportation Computer Vision System</span>
-                    <span class="exp-date">Jan 2022 – May 2022</span>
+                <!-- Project 2 -->
+                <div class="project-card">
+                     <div class="project-thumb">
+                        <img src="images/proj-cv.jpg" onerror="this.style.display='none'" alt="Computer Vision System">
+                     </div>
+                     <div class="project-content">
+                        <div class="exp-header">
+                            <span class="exp-role">Autonomous Transportation Computer Vision System</span>
+                            <span class="exp-date">Jan 2022 – May 2022</span>
+                        </div>
+                         <div class="tech-stack"><em>YOLOv5, TensorFlow, OpenCV</em></div>
+                        <ul class="exp-list">
+                            <li>Built end-to-end real-time vehicle detection & tracking (YOLOv5+BiLSTM+OpenCV) with predictive analytics; achieved 0.45 RMSE.</li>
+                            <li>Optimized YOLOv5 and TensorFlow for Raspberry Pi to meet on-device memory limits and boost throughput and system efficiency.</li>
+                        </ul>
+                     </div>
                 </div>
-                 <div><em>YOLOv5, TensorFlow, OpenCV</em></div>
-                <ul class="exp-list">
-                    <li>Built end-to-end real-time vehicle detection & tracking (YOLOv5+BiLSTM+OpenCV) with predictive analytics; achieved 0.45 RMSE.</li>
-                    <li>Optimized YOLOv5 and TensorFlow for Raspberry Pi to meet on-device memory limits and boost throughput and system efficiency.</li>
-                </ul>
             </div>
         </section>
 
@@ -324,6 +461,23 @@
             <p>© 2024-2025 Rohan Surana. Inspired by Shirley Wu's website.</p>
         </footer>
     </main>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
 </html>
-
