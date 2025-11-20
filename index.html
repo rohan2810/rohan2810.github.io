@@ -14,9 +14,9 @@
         
         <nav class="nav-menu">
             <a href="#about" class="nav-item">About Me</a>
-            <a href="#news" class="nav-item">What's New</a>
             <a href="#research" class="nav-item">Research Topics</a>
             <a href="#experience" class="nav-item">Experience</a>
+            <a href="#teaching" class="nav-item">Teaching</a>
             <a href="#education" class="nav-item">Education</a>
             <a href="#projects" class="nav-item">Projects</a>
             <a href="#skills" class="nav-item">Technical Skills</a>
@@ -42,15 +42,19 @@
             
             <p>
                 I am a Master's student in Data Science at the <strong>University of California, San Diego (UCSD)</strong>, 
-                where I am advised by <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank">Prof. Julian McAuley</a>. 
-                I also work as an AI Research Intern at <strong>Dell Technologies</strong>. Previously, I earned my B.S. in Software Engineering 
-                (Summa Cum Laude) from <strong>San Jose State University</strong>.
+                advised by <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank">Prof. Julian McAuley</a>, and an AI Research Intern at 
+                <strong>Dell Technologies</strong>. I previously earned my B.S. in Software Engineering, summa cum laude, from 
+                <strong>San Jose State University</strong>.
             </p>
             <p>
-                My research centers on <strong>Large Language Models (LLMs)</strong> and their alignment with human intent. 
-                Currently, I focus on preference optimization (DPO), retrieval-augmented generation (RAG), and building 
-                traceable, multi-agent systems. I am passionate about developing AI that is not only powerful but also 
-                reliable, interpretable, and privacy-preserving.
+                My research sits at the intersection of <strong>preference optimization</strong>, <strong>information retrieval</strong>, 
+                and <strong>multimodal learning</strong>. I develop alignment and post-training methods that help LLMs learn human preferences 
+                from structured but sparse signals, including pairwise choices, ranked slates, and in-context listwise feedback. Recent work 
+                includes multi-negative DPO with principled negative selection, in-context ranking and exploration objectives for retrieval and 
+                recommendation, and multimodal extensions that reduce hallucinations through diverse visual negatives and modality-steering. 
+                I also build practical IR and conversational recommender systems, such as active dialogue synthesis for zero or low resource 
+                domains and benchmarks for audio-centric conversational recommendation. Across these projects, my goal is to make models more 
+                <strong>sample-efficient, reliable, and interpretable</strong>, while improving real-world decision quality.
             </p>
         </section>
 
@@ -59,8 +63,12 @@
             <h2>What's New</h2>
             <ul class="updates-list">
                  <li class="update-item">
+                    <span class="update-date">[Dec 2025]</span>
+                     Attending <strong>NeurIPS 2025</strong> in San Diego, CA.
+                </li>
+                 <li class="update-item">
                     <span class="update-date">[Sep 2025]</span>
-                     Completed internship at Dell Technologies, reducing latency in multi-agent LLM systems by 40%.
+                     Completed internship at Dell Technologies!
                 </li>
                 <li class="update-item">
                     <span class="update-date">[Jun 2025]</span>
@@ -97,18 +105,15 @@
                 <div class="paper-item">
                     <div class="paper-row">
                         <div class="paper-thumb">
-                            <img src="images/mass-dpo.jpg" onerror="this.style.display='none'" alt="MASS-DPO" class="paper-img-thumb">
+                            <img src="images/mass-dpo.png" onerror="this.style.display='none'" alt="MASS-DPO" class="paper-img-thumb">
                         </div>
                         <div class="paper-content">
                             <div class="paper-title">MASS-DPO: Multi-Negative Active Sample Selection for Direct Policy Optimization</div>
                             <div class="paper-authors"><strong>Rohan Surana*</strong>, J. Wu*, X. Li, Y. Shen, C. Wang, T. Yu, P. Ammanabrolu, J. Shang, J. McAuley</div>
-                            <div class="paper-venue">Under Review - ICLR 2026 (Score: 5.5)</div>
+                            <div class="paper-venue">Submitted</div>
                             <p class="paper-desc">
-                                We cast multi-negative DPO under the Plackett–Luce model as a D-optimal design problem and develop a greedy, theoretically grounded selection strategy for informative negatives. This improves alignment efficiency and performance.
+                                We cast multi-negative DPO under the Plackett-Luce model as a D-optimal design problem and develop a greedy, theoretically grounded selection strategy for informative negatives. This improves alignment efficiency and performance.
                             </p>
-                            <div style="margin-top: 5px;">
-                                <a href="https://openreview.net/pdf?id=gFtdK7pwHg" target="_blank" class="paper-link">[PDF]</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,7 +121,7 @@
                 <div class="paper-item">
                      <div class="paper-row">
                         <div class="paper-thumb">
-                            <img src="images/irpo.jpg" onerror="this.style.display='none'" alt="IRPO" class="paper-img-thumb">
+                            <img src="images/irpo.png" onerror="this.style.display='none'" alt="IRPO" class="paper-img-thumb">
                         </div>
                          <div class="paper-content">
                             <div class="paper-title">In-context Ranking Preference Optimization (IRPO)</div>
@@ -135,18 +140,47 @@
                 <div class="paper-item">
                     <div class="paper-row">
                         <div class="paper-thumb">
-                            <img src="images/misp-dpo.jpg" onerror="this.style.display='none'" alt="MISP-DPO" class="paper-img-thumb">
+                            <img src="images/misp-dpo.png" onerror="this.style.display='none'" alt="MISP-DPO" class="paper-img-thumb">
                         </div>
                         <div class="paper-content">
                             <div class="paper-title">Importance Sampling for Multi-Negative Multimodal Direct Preference Optimization (MISP-DPO)</div>
-                            <div class="paper-authors"><strong>Rohan Surana (Co-author)</strong>, et al.</div>
-                            <div class="paper-venue">Under Review - ICLR 2026</div>
+                            <div class="paper-authors">X. Li, C. Wang, J. Wu, <strong>Rohan Surana</strong>, T. Yu, J. McAuley, J. Shang</div>
+                            <div class="paper-venue">Submitted</div>
                             <p class="paper-desc">
                                 We extend multi-negative DPO to the multimodal setting, using a CLIP+SAE-based sampler and importance sampling under a Plackett–Luce objective to select semantically diverse visual negatives. This substantially improves multimodal alignment and reduces hallucinations compared to single-negative multimodal DPO baselines.
                             </p>
-                            <div style="margin-top: 5px;">
-                                <a href="https://openreview.net/pdf?id=HEFPwoGtTj" target="_blank" class="paper-link">[PDF]</a>
-                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-row">
+                        <div class="paper-thumb">
+                            <img src="images/ws-grpo.png" onerror="this.style.display='none'" alt="WS-GRPO" class="paper-img-thumb">
+                        </div>
+                        <div class="paper-content">
+                            <div class="paper-title">WS-GRPO: Weakly-Supervised Group-Relative Policy Optimization</div>
+                            <div class="paper-authors">G. Mundada*, <strong>Rohan Surana*</strong>, J. Y. Zhang, X. Li, T. Yu, L. Yao, J. Shang, J. McAuley, J. Wu</div>
+                            <div class="paper-venue">Submitted</div>
+                            <p class="paper-desc">
+                                We address GRPO's dependence on dense step-wise rewards by learning to extract dense preference signals from sparse outcome supervision. WS-GRPO trains a preference model on trajectory-level outcomes, then leverages it to provide step-wise weakly-supervised rewards combined with terminal rewards during group-relative policy optimization. This enables effective reasoning model training without expensive step-by-step annotations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-row">
+                        <div class="paper-thumb">
+                            <img src="images/rlvr-survey.png" onerror="this.style.display='none'" alt="RLVR Survey" class="paper-img-thumb">
+                        </div>
+                        <div class="paper-content">
+                            <div class="paper-title">From Verifiable Rewards to Policy Learning: A Survey of Reinforcement Learning from Verifiable Rewards</div>
+                            <div class="paper-authors">G. Mundada*, <strong>Rohan Surana*</strong>, S. Yu, J. Y. Zhang, Z. Huang, Y. Xiong, X. Li, Y. Xia, R. Jain, C. Huang, N. L. Kuang, T. Yu, R. A. Rossi, D. Zhou, L. Yao, J. Shang, J. McAuley, J. Wu</div>
+                            <div class="paper-venue">Survey Paper</div>
+                            <p class="paper-desc">
+                                We provide the first comprehensive survey of Reinforcement Learning from Verifiable Rewards (RLVR), systematizing methods that train language models using verifier feedback. We introduce taxonomies organizing approaches by verification type, reward computation, and policy learning, establishing unified terminology for mathematical reasoning, code generation, and instruction following.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -157,12 +191,12 @@
                 <div class="paper-item">
                     <div class="paper-row">
                         <div class="paper-thumb">
-                             <img src="images/crs-syn.jpg" onerror="this.style.display='none'" alt="CRS Synthesis" class="paper-img-thumb">
+                             <img src="images/crs-syn.png" onerror="this.style.display='none'" alt="CRS Synthesis" class="paper-img-thumb">
                         </div>
                         <div class="paper-content">
                             <div class="paper-title">From Reviews to Dialogues: Active Synthesis for Zero-Shot LLM-based Conversational Recommender System</div>
-                            <div class="paper-authors"><strong>Rohan Surana (First author)</strong>, et al.</div>
-                            <div class="paper-venue">In preparation (ACL)</div>
+                            <div class="paper-authors"><strong>Rohan Surana*</strong>, J. Wu*, Z. Xie*, Y. Xia, H. Steck, D. Liang, N. Kallus, J. McAuley</div>
+                            <div class="paper-venue">Preprint</div>
                             <p class="paper-desc">
                                 Joint work with Netflix where we design an active data augmentation framework that turns static domain data (reviews, metadata, collaborative signals) into synthetic conversations using black-box LLMs, enabling smaller in-house CRS models to operate in true zero-/low-resource settings.
                             </p>
@@ -176,12 +210,12 @@
                 <div class="paper-item">
                     <div class="paper-row">
                         <div class="paper-thumb">
-                             <img src="images/musicrs.jpg" onerror="this.style.display='none'" alt="MusiCRS" class="paper-img-thumb">
+                             <img src="images/musicrs.png" onerror="this.style.display='none'" alt="MusiCRS" class="paper-img-thumb">
                         </div>
                         <div class="paper-content">
                             <div class="paper-title">MusiCRS: Benchmarking Audio-Centric Conversational Recommendation</div>
                             <div class="paper-authors"><strong>Rohan Surana*</strong>, A. Namburi*, G. Mundada*, A. Lal*, Z. Novack, J. McAuley, J. Wu</div>
-                            <div class="paper-venue">Under Review - ICASSP</div>
+                            <div class="paper-venue">Submitted</div>
                             <p class="paper-desc">
                                 We build the first benchmark that ties real conversational queries to actual music tracks, enabling evaluation across audio-only, text-only, and audio+text settings. This exposes how current CRS models over-rely on text and struggle with nuanced audio reasoning.
                             </p>
@@ -191,12 +225,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="paper-item">
-                     <div class="paper-title">Active Data Distillation for Zero-shot LLM CRS</div>
-                    <div class="paper-authors"><strong>Rohan Surana*</strong>, J. Wu*, Z. Xie*, Y. Xia, H. Steck, D. Liang, N. Kallus, J. McAuley</div>
-                    <div class="paper-venue">Under Review - WSDM 2026</div>
-                </div>
             </div>
 
             <!-- Tab Content: Multimodal -->
@@ -204,7 +232,7 @@
                 <div class="paper-item">
                     <div class="paper-row">
                         <div class="paper-thumb">
-                             <img src="images/traceable-mllm.jpg" onerror="this.style.display='none'" alt="Traceable MLLM" class="paper-img-thumb">
+                             <img src="images/traceable-mllm.png" onerror="this.style.display='none'" alt="Traceable MLLM" class="paper-img-thumb">
                         </div>
                         <div class="paper-content">
                             <div class="paper-title">Traceable and Explainable Multimodal Large Language Models: An Information-Theoretic View</div>
@@ -223,7 +251,7 @@
                 <div class="paper-item">
                     <div class="paper-row">
                         <div class="paper-thumb">
-                             <img src="images/image-diff.jpg" onerror="this.style.display='none'" alt="Image Diff Captioning" class="paper-img-thumb">
+                             <img src="images/image-diff.png" onerror="this.style.display='none'" alt="Image Diff Captioning" class="paper-img-thumb">
                         </div>
                         <div class="paper-content">
                             <div class="paper-title">Image Difference Captioning via Adversarial Preference Optimization</div>
@@ -242,18 +270,15 @@
                 <div class="paper-item">
                     <div class="paper-row">
                         <div class="paper-thumb">
-                             <img src="images/amps.jpg" onerror="this.style.display='none'" alt="AMPS" class="paper-img-thumb">
+                             <img src="images/amps.png" onerror="this.style.display='none'" alt="AMPS" class="paper-img-thumb">
                         </div>
                         <div class="paper-content">
                             <div class="paper-title">AMPS: Adaptive Modality Preference Steering via Functional Entropy</div>
-                            <div class="paper-authors"><strong>Rohan Surana (Co-author)</strong>, et al.</div>
-                            <div class="paper-venue">Under Review - ICLR 2026</div>
+                            <div class="paper-authors">Z. Huang, X. Li, J. Wu, <strong>Rohan Surana</strong>, T. Yu, R. Wang, J. McAuley, J. Shang</div>
+                            <div class="paper-venue">Submitted</div>
                             <p class="paper-desc">
                                 We study modality preference in MLLMs (e.g., over-reliance on text vs. images) and propose an entropy-based diagnostic plus a sample-wise steering mechanism that adjusts steering intensity per input to avoid generation collapse while still shifting modality usage in a controlled way.
                             </p>
-                            <div style="margin-top: 5px;">
-                                <a href="https://openreview.net/pdf?id=XekKGk5Fcd" target="_blank" class="paper-link">[PDF]</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -263,108 +288,129 @@
         <!-- Experience Section -->
         <section id="experience">
             <h2>Experience</h2>
-
-            <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">Graduate Teaching Assistant</span>
-                    <span class="exp-date">Mar 2025 – Present</span>
+            <div class="timeline">
+                <!-- Dell Technologies Group -->
+                <div class="timeline-item company-group">
+                    <div class="company-header">
+                        <img src="images/dell-logo.png" alt="Dell Technologies" class="company-logo" onerror="this.style.display='none'">
+                        <div class="company-info">
+                            <h3>Dell Technologies</h3>
+                            <p class="company-duration">Jul 2022 - Sept 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="roles-container">
+                        <!-- AI Research Intern -->
+                        <div class="role-item">
+                            <div class="timeline-date">June 2025 - Sept 2025</div>
+                            <div class="timeline-content">
+                                <h4 class="role-title">AI Research Intern | Hopkinton, MA</h4>
+                                <p class="exp-summary">Built production-grade multi-agent LLM systems with 40% latency reduction, scalable RAG pipelines, and autonomous monitoring infrastructure.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Software Engineer II -->
+                        <div class="role-item">
+                            <div class="timeline-date">Mar 2024 - Aug 2024</div>
+                            <div class="timeline-content">
+                                <h4 class="role-title">Software Engineer II | Santa Clara, CA</h4>
+                                <p class="exp-summary">Architected TOSCA-based orchestration framework and real-time infrastructure digital twin with graph databases, achieving 30% faster provisioning and 25% response time improvement.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Software Engineer I -->
+                        <div class="role-item">
+                            <div class="timeline-date">Jul 2022 - Mar 2024</div>
+                            <div class="timeline-content">
+                                <h4 class="role-title">Software Engineer I | Santa Clara, CA</h4>
+                                <p class="exp-summary">Automated GPU-accelerated ML infrastructure with Kubernetes operators (20% faster deployment), redesigned gRPC services leading a 4-person team, and expanded observability coverage by 30%.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <span class="exp-company">UC San Diego <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| San Diego, CA</span></span>
-                <ul class="exp-list">
-                    <li>Teaching Assistant, CSE 258: Web Mining and Recommender Systems (Sep 2025 - Present)</li>
-                    <li>Teaching Assistant, CSE 153: Machine Learning for Music (Mar 2025 - Sep 2025)</li>
-                </ul>
+
+                <!-- Machine Learning Researcher -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2021 – May 2022</div>
+                    <div class="timeline-content">
+                        <div class="exp-with-logo">
+                            <img src="images/spartan-logo.png" alt="Spartan Superway" class="exp-logo" onerror="this.style.display='none'">
+                            <div>
+                                <h3>Machine Learning Researcher</h3>
+                                <h4>Spartan Superway | San Jose, CA</h4>
+                            </div>
+                        </div>
+                        <p class="exp-summary">Developed real-time vehicle detection and tracking system using YOLOv5 and BiLSTM for autonomous transportation, achieving 0.45 RMSE.</p>
+                    </div>
+                </div>
+
+                <!-- Open Source Developer -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Feb 2021 – Mar 2021</div>
+                    <div class="timeline-content">
+                        <div class="exp-with-logo">
+                            <img src="images/apache-logo.png" alt="Apache" class="exp-logo" onerror="this.style.display='none'">
+                            <div>
+                                <h3>Open Source Developer</h3>
+                                <h4>The Apache Software Foundation | Remote</h4>
+                            </div>
+                        </div>
+                        <p class="exp-summary">Contributed to Apache Tika, enhancing file detection and content analysis capabilities.</p>
+                    </div>
+                </div>
+
+                <!-- Software Developer Intern -->
+                <div class="timeline-item">
+                    <div class="timeline-date">May 2020 – Aug 2020</div>
+                    <div class="timeline-content">
+                        <div class="exp-with-logo">
+                            <img src="images/confluxsys-logo.png" alt="Confluxsys" class="exp-logo" onerror="this.style.display='none'">
+                            <div>
+                                <h3>Software Developer Intern</h3>
+                                <h4>Confluxsys LLC | Menlo Park, CA</h4>
+                            </div>
+                        </div>
+                        <p class="exp-summary">Built data mining modules using Spark, Scala, and GNNs, improving pipeline throughput by 25% and reducing job runtimes by 45% for healthcare and finance clients.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">AI Research Intern</span>
-                    <span class="exp-date">June 2025 – Sept 2025</span>
+        <!-- Teaching Section -->
+        <section id="teaching">
+            <h2>Teaching</h2>
+            <div class="teaching-list">
+                <div class="teaching-item">
+                    <div class="teaching-header">
+                        <img src="images/ucsd-logo.png" alt="UCSD" class="teaching-logo" onerror="this.style.display='none'">
+                        <div class="teaching-info">
+                            <div class="teaching-role">Graduate Teaching Assistant</div>
+                            <div class="teaching-institution">University of California, San Diego</div>
+                            <div class="teaching-period">Mar 2025 – Present</div>
+                        </div>
+                    </div>
+                    <ul class="teaching-courses">
+                        <li><strong>CSE 258:</strong> Web Mining and Recommender Systems (Sep 2025 - Present)</li>
+                        <li><strong>CSE 153:</strong> Machine Learning for Music (Mar 2025 - Sep 2025)</li>
+                    </ul>
                 </div>
-                <span class="exp-company">Dell Technologies <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| Hopkinton, MA</span></span>
-                <ul class="exp-list">
-                    <li>Built multi-agent LLM system (LangGraph/LangChain + vLLM) with request batching and KV-cache, cutting p95 latency by 40%.</li>
-                    <li>Designed scalable RAG pipelines integrating LLMs with vector databases using hybrid search and intelligent chunking strategies.</li>
-                    <li>Engineered short/long-term memory with retrieval caching to reduce serving cost & exposed APIs for integration with existing workflows.</li>
-                    <li>Developed agent-based monitoring using MCP and A2A protocols to automate telemetry collection, anomaly detection, and remediation.</li>
-                </ul>
-            </div>
 
-            <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">Software Engineer II</span>
-                    <span class="exp-date">Mar 2024 – Aug 2024</span>
+                <div class="teaching-item">
+                    <div class="teaching-header">
+                        <img src="images/sjsu-logo.png" alt="SJSU" class="teaching-logo" onerror="this.style.display='none'">
+                        <div class="teaching-info">
+                            <div class="teaching-role">Teaching Assistant & Tutor</div>
+                            <div class="teaching-institution">San Jose State University</div>
+                            <div class="teaching-period">Jan 2020 – May 2022</div>
+                        </div>
+                    </div>
+                    <ul class="teaching-courses">
+                        <li><strong>CS Peer Tutor:</strong> SJSU Peer Connections (Jan 2022 - May 2022)</li>
+                        <li><strong>CS46B:</strong> Introduction to Data Structures (Aug 2021 - May 2022)</li>
+                        <li><strong>CS149:</strong> Operating Systems (Aug 2021 - Jan 2022)</li>
+                        <li><strong>Math Workshop Facilitator:</strong> Calculus II (Jan 2020 - Aug 2021)</li>
+                    </ul>
                 </div>
-                <span class="exp-company">Dell Technologies <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| Santa Clara, CA</span></span>
-                <ul class="exp-list">
-                    <li>Architected TOSCA-based framework to orchestrate resources, cutting provisioning time 30% and improving infrastructure flexibility.</li>
-                    <li>Built real-time infrastructure digital twin with predictive analytics using graph databases to enable drift detection and safe remediation.</li>
-                    <li>Optimized intent workflows with graph-based scheduling to improve response time by 25% under peak load and increase throughput.</li>
-                    <li>Developed drift-detection & reconciliation engine and partnered with the telemetry team to enhance analytics and predictive maintenance.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">Software Engineer I</span>
-                    <span class="exp-date">Jul 2022 – Mar 2024</span>
-                </div>
-                <span class="exp-company">Dell Technologies <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| Santa Clara, CA</span></span>
-                <ul class="exp-list">
-                    <li>Accelerated cluster time-to-ready by 20% through automated Kubernetes operators supporting GPU workloads, KServe, and TorchServe.</li>
-                    <li>Enhanced service performance by redesigning API and proto services with gRPC, leading a 4-intern team to boost efficiency 15%.</li>
-                    <li>Expanded system-wide tracing and observability coverage 30% by deploying OpenTelemetry with Prometheus, Jaeger, and Grafana.</li>
-                    <li>Implemented multi-tenant gRPC middleware in Golang with policy-based authn/authz, enabling granular access control policies.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">Machine Learning Researcher</span>
-                    <span class="exp-date">Aug 2021 – May 2022</span>
-                </div>
-                <span class="exp-company">Spartan Superway <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| San Jose, CA</span></span>
-                <ul class="exp-list">
-                    <li>Conducted research on machine learning applications for autonomous transportation systems.</li>
-                    <li>Built end-to-end real-time vehicle detection & tracking (YOLOv5+BiLSTM+OpenCV) with predictive analytics; achieved 0.45 RMSE.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">Teaching Assistant & Tutor</span>
-                    <span class="exp-date">Jan 2020 – May 2022</span>
-                </div>
-                <span class="exp-company">San Jose State University <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| San Jose, CA</span></span>
-                <ul class="exp-list">
-                    <li><strong>Peer Tutor (CS):</strong> SJSU Peer Connections (Jan 2022 - May 2022)</li>
-                    <li><strong>Teaching Assistant (CS46B):</strong> Introduction to Data Structures (Aug 2021 - May 2022)</li>
-                    <li><strong>Teaching Assistant (CS149):</strong> Operating Systems (Aug 2021 - Jan 2022)</li>
-                    <li><strong>Math Workshop Facilitator:</strong> Calculus II (Jan 2020 - Aug 2021)</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">Open Source Developer</span>
-                    <span class="exp-date">Feb 2021 – Mar 2021</span>
-                </div>
-                <span class="exp-company">The Apache Software Foundation <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| Remote</span></span>
-                <ul class="exp-list">
-                    <li>Contributed to the Apache Tika project, enhancing file detection and content analysis capabilities.</li>
-                </ul>
-            </div>
-
-             <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">Software Developer Intern</span>
-                    <span class="exp-date">May 2020 – Aug 2020</span>
-                </div>
-                <span class="exp-company">Confluxsys LLC <span style="font-weight: normal; color: #666; font-size: 0.9rem;">| Menlo Park, CA</span></span>
-                <ul class="exp-list">
-                    <li>Developed "Reward Distribution" & "Role Miner" modules using Spark libraries, increasing performance by 25%.</li>
-                    <li>Designed data mining tools with Spark and Scala, boosting performance by 45% and streamlining workflows with DataStax libraries.</li>
-                </ul>
             </div>
         </section>
 
@@ -375,7 +421,7 @@
             <div class="education-grid">
                 <!-- UCSD -->
                 <div class="edu-card">
-                    <div class="edu-logo-placeholder">
+                    <div class="edu-logo-placeholder ucsd-logo">
                          <img src="images/ucsd-logo.png" alt="UCSD Logo" onerror="this.style.display='none'; this.parentNode.innerText='UCSD'">
                     </div>
                     <div class="edu-school">University of California, San Diego</div>
@@ -389,7 +435,7 @@
 
                 <!-- SJSU -->
                 <div class="edu-card">
-                    <div class="edu-logo-placeholder">
+                    <div class="edu-logo-placeholder sjsu-logo">
                          <img src="images/sjsu-logo.png" alt="SJSU Logo" onerror="this.style.display='none'; this.parentNode.innerText='SJSU'">
                     </div>
                     <div class="edu-school">San Jose State University</div>
@@ -409,37 +455,25 @@
             <div class="project-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
-                     <div class="project-thumb">
-                        <img src="images/proj-llm-privacy.jpg" onerror="this.style.display='none'" alt="Privacy Preserving LLM">
-                     </div>
                      <div class="project-content">
                         <div class="exp-header">
                             <span class="exp-role">Privacy-Preserving LLM Training with Synthetic Data</span>
                             <span class="exp-date">Sept 2024 – Dec 2024</span>
                         </div>
                         <div class="tech-stack"><em>CrewAI, Unsloth, PyTorch, Llama-2</em></div>
-                        <ul class="exp-list">
-                            <li>Designed a multi-agent data-generation framework with CrewAI for persona generation and PII masking to produce PII-safe corpora.</li>
-                            <li>Fine-tuned 2 OSS LLMs via PEFT (Unsloth) to 99% PII removal and built 270-Q eval benchmark for model assessment.</li>
-                        </ul>
+                        <p class="exp-summary">Designed multi-agent framework for PII-safe data generation and fine-tuned 2 open-source LLMs achieving 99% PII removal with 270-question evaluation benchmark.</p>
                      </div>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="project-card">
-                     <div class="project-thumb">
-                        <img src="images/proj-cv.jpg" onerror="this.style.display='none'" alt="Computer Vision System">
-                     </div>
                      <div class="project-content">
                         <div class="exp-header">
                             <span class="exp-role">Autonomous Transportation Computer Vision System</span>
                             <span class="exp-date">Jan 2022 – May 2022</span>
                         </div>
                          <div class="tech-stack"><em>YOLOv5, TensorFlow, OpenCV</em></div>
-                        <ul class="exp-list">
-                            <li>Built end-to-end real-time vehicle detection & tracking (YOLOv5+BiLSTM+OpenCV) with predictive analytics; achieved 0.45 RMSE.</li>
-                            <li>Optimized YOLOv5 and TensorFlow for Raspberry Pi to meet on-device memory limits and boost throughput and system efficiency.</li>
-                        </ul>
+                        <p class="exp-summary">Built real-time vehicle detection and tracking system with YOLOv5 and BiLSTM achieving 0.45 RMSE, optimized for Raspberry Pi deployment.</p>
                      </div>
                 </div>
             </div>
@@ -458,7 +492,7 @@
         </section>
 
         <footer style="margin-top: 60px; color: #777; font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 20px;">
-            <p>© 2024-2025 Rohan Surana. Inspired by Shirley Wu's website.</p>
+            <p>© 2024-2025 Rohan Surana. Inspired by <a href="https://cs.stanford.edu/~shirwu/" target="_blank">Shirley Wu's website</a>.</p>
         </footer>
     </main>
 
