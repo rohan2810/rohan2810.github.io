@@ -3,142 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohan Surana - Personal Website</title>
+    <title>Rohan Surana | AI Researcher</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%2300ff00'/><rect x='2' y='2' width='12' height='12' fill='%23000'/><rect x='4' y='4' width='8' height='8' fill='%2300ff00'/></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <!-- ASCII Art Header -->
-        <div class="ascii-art animate-neon">
-██████╗  ██████╗ ██╗  ██╗ █████╗ ███╗   ██╗
-██╔══██╗██╔═══██╗██║  ██║██╔══██╗████╗  ██║
-██████╔╝██║   ██║███████║███████║██╔██╗ ██║
-██╔══██╗██║   ██║██╔══██║██╔══██║██║╚██╗██║
-██║  ██║╚██████╔╝██║  ██║██║  ██║██║ ╚████║
-╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
-        </div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <img src="images/rohan-profile.jpg" alt="Rohan Surana" class="profile-img">
+        
+        <nav class="nav-menu">
+            <a href="#about" class="nav-item">About Me</a>
+            <a href="#news" class="nav-item">What's New</a>
+            <a href="#research" class="nav-item">Research Topics</a>
+            <a href="#experience" class="nav-item">Experience</a>
+            <a href="#education" class="nav-item">Education</a>
+            <a href="#projects" class="nav-item">Projects</a>
+            <a href="#skills" class="nav-item">Technical Skills</a>
+            <a href="assets/resume.pdf" class="nav-item" target="_blank">Resume / CV</a>
+        </nav>
 
-        <!-- Navigation -->
-        <div class="nav-container">
-            <nav class="nav-menu">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About</a>
-                <a href="experience.html">Experience</a>
-                <a href="projects.html">Projects</a>
-                <a href="publications.html">Publications</a>
-                <a href="travel.html">Travel</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+        <div class="social-links">
+            <a href="https://github.com/rohan2810" class="social-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/rohansurana28/" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:rohansurana2810@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
+        <div style="margin-top: 15px; color: rgba(255,255,255,0.7); font-size: 0.8rem; text-align: center;">
+            rohansurana2810@gmail.com
+        </div>
+    </aside>
 
-        <!-- Welcome Section -->
-        <div class="section">
-            <h1>Welcome to My Cyberspace!</h1>
-            <div class="marquee">
-                <div class="marquee-content">
-                    🌟 AI Research Engineer • Software Developer • Tech Enthusiast • World Explorer 🌟
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- About Section -->
+        <section id="about" class="bio-section">
+            <h1>Rohan Surana</h1>
+            <p class="subtitle">Masters Student in Data Science @ UCSD | AI Research Intern @ Dell</p>
+            
+            <p>
+                I am a Master's student in Data Science at the <strong>University of California, San Diego (UCSD)</strong>, 
+                where I am advised by <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank">Prof. Julian McAuley</a>. 
+                I also work as an AI Research Intern at <strong>Dell Technologies</strong>. Previously, I earned my B.S. in Software Engineering 
+                (Summa Cum Laude) from <strong>San Jose State University</strong>.
+            </p>
+            <p>
+                My research centers on <strong>Large Language Models (LLMs)</strong> and their alignment with human intent. 
+                Currently, I focus on preference optimization (DPO), retrieval-augmented generation (RAG), and building 
+                traceable, multi-agent systems. I am passionate about developing AI that is not only powerful but also 
+                reliable, interpretable, and privacy-preserving.
+            </p>
+        </section>
+
+        <!-- What's New Section -->
+        <section id="news">
+            <h2>What's New</h2>
+            <ul class="updates-list">
+                 <li class="update-item">
+                    <span class="update-date">[Sep 2025]</span>
+                     Completed internship at Dell Technologies, reducing latency in multi-agent LLM systems by 40%.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Jun 2025]</span>
+                     Joined <strong>Dell Technologies</strong> as an AI Research Intern in Hopkinton, MA.
+                </li>
+                 <li class="update-item">
+                    <span class="update-date">[May 2025]</span>
+                     Our paper "In-context Ranking Preference Optimization" was accepted to <strong>COLM 2025</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[May 2025]</span>
+                     Our paper "Traceable and Explainable Multimodal LLMs" was accepted to <strong>COLM 2025</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[May 2025]</span>
+                     Our paper "Image Difference Captioning via Adversarial Preference Optimization" was accepted to <strong>EMNLP 2025</strong>.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Research Topics / Publications -->
+        <section id="research">
+            <h2>Research Topics</h2>
+            
+            <!-- Category 1 -->
+            <h3 style="font-size: 1.2rem; color: var(--sidebar-bg); margin-top: 30px; margin-bottom: 15px; font-weight: 600;">LLM alignment and post-training (w. Adobe)</h3>
+
+            <div class="paper-item">
+                <div class="paper-title">MASS-DPO: Multi-Negative Active Sample Selection for Direct Policy Optimization</div>
+                <div class="paper-authors"><strong>Rohan Surana*</strong>, J. Wu*, X. Li, Y. Shen, C. Wang, T. Yu, P. Ammanabrolu, J. Shang, J. McAuley</div>
+                <div class="paper-venue">Under Review - ICLR 2026 (Score: 5.5)</div>
+                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
+                    We cast multi-negative DPO under the Plackett–Luce model as a D-optimal design problem and develop a greedy, theoretically grounded selection strategy for informative negatives. This improves alignment efficiency and performance.
+                </p>
+                <div style="margin-top: 5px;">
+                    <a href="https://openreview.net/pdf?id=gFtdK7pwHg" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
                 </div>
             </div>
-            
-            <p>Greetings, fellow netizen! You've stumbled upon my corner of the information superhighway. 
-            This site is optimized for Netscape Navigator and Internet Explorer 4.0+</p>
-            
-            <div class="visitor-counter animate-border-glow">
-                <strong>VISITOR COUNTER:</strong> <span class="blink">001337</span> 
-                | Last Updated: <span class="animate-blink">December 2024</span>
+
+            <div class="paper-item">
+                <div class="paper-title">In-context Ranking Preference Optimization (IRPO)</div>
+                <div class="paper-authors">J. Wu*, <strong>Rohan Surana*</strong>, Z. Xie, Y. Shen, Y. Xia, T. Yu, R. Rossi, P. Ammanabrolu, J. McAuley</div>
+                <div class="paper-venue">COLM 2025</div>
+                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
+                    We extend Direct Preference Optimization to ranking, allowing LLMs to learn from sparse, in-context listwise feedback and directly optimize differentiable surrogates of ranking metrics. This connects preference optimization with practical IR settings like conversational recommendation and generative retrieval.
+                </p>
+                <div style="margin-top: 5px;">
+                    <a href="https://arxiv.org/pdf/2504.15477" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
+                </div>
             </div>
-        </div>
 
-        <!-- Profile Section -->
-        <div class="profile-section">
-            <h2>About Rohan Surana</h2>
-            <table style="width: 100%; border: none;">
-                <tr>
-                    <td style="width: 70%; border: none; vertical-align: top;">
-                        <p><strong>Current Role:</strong> AI Research Intern at Dell Technologies</p>
-                        <p><strong>Education:</strong> MS Data Science - UC San Diego (Expected June 2026)</p>
-                        <p><strong>Location:</strong> San Diego, CA 🌴</p>
-                        <p><strong>Interests:</strong> Machine Learning, AI Research, LLM Alignment, Conversational RecSys</p>
-                        <p><strong>Status:</strong> <span class="animate-blink">Pursuing graduate studies & research!</span></p>
-                    </td>
-                    <td style="width: 30%; border: none; text-align: center;">
-                        <div style="border: 3px solid var(--text-primary); padding: 10px; background: var(--bg-secondary);">
-                            <img src="images/profile.jpg" alt="Profile Photo" class="profile-photo" 
-                                 style="width: 150px; height: 150px; object-fit: cover; border: 2px solid var(--accent);"
-                                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDE1MCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiBmaWxsPSIjMWExYTFhIiBzdHJva2U9IiMwMGZmMDAiIHN0cm9rZS13aWR0aD0iMiIvPgo8dGV4dCB4PSI3NSIgeT0iODAiIGZvbnQtZmFtaWx5PSJDb3VyaWVyIE5ldyIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzAwZmYwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UE9SVFJBSVQgPC90ZXh0Pgo8dGV4dCB4PSI3NSIgeT0iMTAwIiBmb250LWZhbWlseT0iQ291cmllciBOZXciIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMwMGZmMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNPTUlORyBTT09OPC90ZXh0Pgo8L3N2Zz4K';">
-                            <br>
-                            <small>[ PHOTO LOADING... ]</small>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
+            <div class="paper-item">
+                <div class="paper-title">Importance Sampling for Multi-Negative Multimodal Direct Preference Optimization (MISP-DPO)</div>
+                <div class="paper-authors"><strong>Rohan Surana (Co-author)</strong>, et al.</div>
+                <div class="paper-venue">Under Review - ICLR 2026</div>
+                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
+                    We extend multi-negative DPO to the multimodal setting, using a CLIP+SAE-based sampler and importance sampling under a Plackett–Luce objective to select semantically diverse visual negatives. This substantially improves multimodal alignment and reduces hallucinations compared to single-negative multimodal DPO baselines.
+                </p>
+                <div style="margin-top: 5px;">
+                    <a href="https://openreview.net/pdf?id=HEFPwoGtTj" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
+                </div>
+            </div>
 
-        <!-- Latest Updates -->
-        <div class="section">
-            <h2>Latest Updates 📡</h2>
-            <ul>
-                <li><strong>[JUN 2025]</strong> 🔬 Started AI Research Internship at Dell Technologies</li>
-                <li><strong>[DEC 2024]</strong> 📝 Submitted multiple papers to NeurIPS'25, RecSys'25, EMNLP'25</li>
-                <li><strong>[SEP 2024]</strong> 📊 Published paper on In-context Ranking Preference Optimization (COLM'25)</li>
-                <li><strong>[MAY 2022]</strong> 🎓 Graduated Summa Cum Laude from SJSU with BS Software Engineering</li>
-                <li><strong>[DEC 2024]</strong> 💻 Launched retro 90's personal website</li>
+            <!-- Category 2 -->
+            <h3 style="font-size: 1.2rem; color: var(--sidebar-bg); margin-top: 30px; margin-bottom: 15px; font-weight: 600;">Information retrieval and recommendation (w. Netflix, Adobe)</h3>
+
+            <div class="paper-item">
+                <div class="paper-title">From Reviews to Dialogues: Active Synthesis for Zero-Shot LLM-based Conversational Recommender System</div>
+                <div class="paper-authors"><strong>Rohan Surana (First author)</strong>, et al.</div>
+                <div class="paper-venue">In preparation (ACL)</div>
+                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
+                    Joint work with Netflix where we design an active data augmentation framework that turns static domain data (reviews, metadata, collaborative signals) into synthetic conversations using black-box LLMs, enabling smaller in-house CRS models to operate in true zero-/low-resource settings.
+                </p>
+                <div style="margin-top: 5px;">
+                    <a href="https://arxiv.org/pdf/2504.15476" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
+                </div>
+            </div>
+
+            <div class="paper-item">
+                <div class="paper-title">MusiCRS: Benchmarking Audio-Centric Conversational Recommendation</div>
+                <div class="paper-authors"><strong>Rohan Surana*</strong>, A. Namburi*, G. Mundada*, A. Lal*, Z. Novack, J. McAuley, J. Wu</div>
+                <div class="paper-venue">Under Review - ICASSP</div>
+                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
+                    We build the first benchmark that ties real conversational queries to actual music tracks, enabling evaluation across audio-only, text-only, and audio+text settings. This exposes how current CRS models over-rely on text and struggle with nuanced audio reasoning.
+                </p>
+                <div style="margin-top: 5px;">
+                    <a href="https://arxiv.org/pdf/2509.19469" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
+                </div>
+            </div>
+
+            <div class="paper-item">
+                <div class="paper-title">Active Data Distillation for Zero-shot LLM CRS</div>
+                <div class="paper-authors"><strong>Rohan Surana*</strong>, J. Wu*, Z. Xie*, Y. Xia, H. Steck, D. Liang, N. Kallus, J. McAuley</div>
+                <div class="paper-venue">Under Review - WSDM 2026</div>
+            </div>
+
+            <!-- Category 3 -->
+            <h3 style="font-size: 1.2rem; color: var(--sidebar-bg); margin-top: 30px; margin-bottom: 15px; font-weight: 600;">Multimodal learning</h3>
+
+            <div class="paper-item">
+                <div class="paper-title">Traceable and Explainable Multimodal Large Language Models: An Information-Theoretic View</div>
+                <div class="paper-authors">Z. Huang, J. Wu, <strong>Rohan Surana</strong>, R. Jain, T. Yu, R. Addanki, D. Arbour, S. Kim, J. McAuley</div>
+                <div class="paper-venue">COLM 2025</div>
+                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
+                    We propose an information-theoretic framework (via a concept bottleneck and mutual-information-style measures) to make MLLMs more traceable: quantifying how much visual information is retained, transformed, or discarded as it flows through the model under different textual instructions.
+                </p>
+                <div style="margin-top: 5px;">
+                    <a href="https://openreview.net/pdf?id=pQm66IPmeE" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
+                </div>
+            </div>
+
+            <div class="paper-item">
+                <div class="paper-title">Image Difference Captioning via Adversarial Preference Optimization</div>
+                <div class="paper-authors">Z. Huang, J. Wu, <strong>Rohan Surana</strong>, T. Yu, D. Arbour, R. Sinha, J. McAuley</div>
+                <div class="paper-venue">EMNLP 2025</div>
+                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
+                    We formulate image difference captioning as a preference-optimization problem and introduce an adversarial hard-negative retriever plus DPO-style training to better capture fine-grained visual differences. This combines multimodal reasoning with preference-based training.
+                </p>
+                <div style="margin-top: 5px;">
+                    <a href="https://aclanthology.org/2025.emnlp-main.1713.pdf" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
+                </div>
+            </div>
+
+            <div class="paper-item">
+                <div class="paper-title">AMPS: Adaptive Modality Preference Steering via Functional Entropy</div>
+                <div class="paper-authors"><strong>Rohan Surana (Co-author)</strong>, et al.</div>
+                <div class="paper-venue">Under Review - ICLR 2026</div>
+                <p class="paper-desc" style="font-size: 0.9rem; color: #555; margin-top: 5px;">
+                    We study modality preference in MLLMs (e.g., over-reliance on text vs. images) and propose an entropy-based diagnostic plus a sample-wise steering mechanism that adjusts steering intensity per input to avoid generation collapse while still shifting modality usage in a controlled way.
+                </p>
+                <div style="margin-top: 5px;">
+                    <a href="https://openreview.net/pdf?id=XekKGk5Fcd" target="_blank" style="font-size: 0.85rem; margin-right: 10px;">[PDF]</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">AI Research Intern</span>
+                    <span class="exp-date">June 2025 – Sept 2025</span>
+                </div>
+                <span class="exp-company">Dell Technologies</span>
+                <ul class="exp-list">
+                    <li>Built multi-agent LLM system (LangGraph/LangChain + vLLM) with request batching and KV-cache, cutting p95 latency by 40%.</li>
+                    <li>Designed scalable RAG pipelines integrating LLMs with vector databases using hybrid search and intelligent chunking strategies.</li>
+                    <li>Engineered short/long-term memory with retrieval caching to reduce serving cost & exposed APIs for integration with existing workflows.</li>
+                    <li>Developed agent-based monitoring using MCP and A2A protocols to automate telemetry collection, anomaly detection, and remediation.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Software Engineer II</span>
+                    <span class="exp-date">Mar 2024 – Aug 2024</span>
+                </div>
+                <span class="exp-company">Dell Technologies</span>
+                <ul class="exp-list">
+                    <li>Architected TOSCA-based framework to orchestrate resources, cutting provisioning time 30% and improving infrastructure flexibility.</li>
+                    <li>Built real-time infrastructure digital twin with predictive analytics using graph databases to enable drift detection and safe remediation.</li>
+                    <li>Optimized intent workflows with graph-based scheduling to improve response time by 25% under peak load and increase throughput.</li>
+                    <li>Developed drift-detection & reconciliation engine and partnered with the telemetry team to enhance analytics and predictive maintenance.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Software Engineer I</span>
+                    <span class="exp-date">Jul 2022 – Mar 2024</span>
+                </div>
+                <span class="exp-company">Dell Technologies</span>
+                <ul class="exp-list">
+                    <li>Accelerated cluster time-to-ready by 20% through automated Kubernetes operators supporting GPU workloads, KServe, and TorchServe.</li>
+                    <li>Enhanced service performance by redesigning API and proto services with gRPC, leading a 4-intern team to boost efficiency 15%.</li>
+                    <li>Expanded system-wide tracing and observability coverage 30% by deploying OpenTelemetry with Prometheus, Jaeger, and Grafana.</li>
+                    <li>Implemented multi-tenant gRPC middleware in Golang with policy-based authn/authz, enabling granular access control policies.</li>
+                </ul>
+            </div>
+
+             <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Software Developer Intern</span>
+                    <span class="exp-date">May 2020 – Aug 2020</span>
+                </div>
+                <span class="exp-company">Confluxsys LLC</span>
+                <ul class="exp-list">
+                    <li>Built modules using Spark, Scala, & GNNs improving pipeline throughput 25% unlocking analytics for healthcare & finance clients.</li>
+                    <li>Created data-mining utilities using DataStax libraries; reduced job runtimes 45% and standardized ETL for downstream ML features.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            
+             <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Masters of Science in Data Science</span>
+                    <span class="exp-date">March 2026</span>
+                </div>
+                <span class="exp-company">University of California, San Diego (UCSD)</span>
+                <div>GPA: 3.88/4.00 | Advisor: Julian McAuley</div>
+            </div>
+
+             <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Bachelor of Science in Software Engineering</span>
+                    <span class="exp-date">May 2022</span>
+                </div>
+                <span class="exp-company">San Jose State University</span>
+                <div>GPA: 3.87/4.00 (Summa cum laude)</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Privacy-Preserving LLM Training with Synthetic Data</span>
+                    <span class="exp-date">Sept 2024 – Dec 2024</span>
+                </div>
+                <div><em>CrewAI, Unsloth, PyTorch, Llama-2</em></div>
+                <ul class="exp-list">
+                    <li>Designed a multi-agent data-generation framework with CrewAI for persona generation and PII masking to produce PII-safe corpora.</li>
+                    <li>Fine-tuned 2 OSS LLMs via PEFT (Unsloth) to 99% PII removal and built 270-Q eval benchmark for model assessment.</li>
+                </ul>
+            </div>
+
+             <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Autonomous Transportation Computer Vision System</span>
+                    <span class="exp-date">Jan 2022 – May 2022</span>
+                </div>
+                 <div><em>YOLOv5, TensorFlow, OpenCV</em></div>
+                <ul class="exp-list">
+                    <li>Built end-to-end real-time vehicle detection & tracking (YOLOv5+BiLSTM+OpenCV) with predictive analytics; achieved 0.45 RMSE.</li>
+                    <li>Optimized YOLOv5 and TensorFlow for Raspberry Pi to meet on-device memory limits and boost throughput and system efficiency.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <ul class="skills-list">
+                <li><strong>Languages:</strong> Python, Golang, Java, Scala, SQL</li>
+                <li><strong>ML/DL:</strong> PyTorch, TensorFlow, scikit-learn, Transformers, OpenCV, NumPy, Pandas</li>
+                <li><strong>LLM/NLP:</strong> LangGraph, LangChain, vLLM, Unsloth, CrewAI, Hugging Face</li>
+                <li><strong>Infrastructure:</strong> Kubernetes, Docker, FastAPI, Spark, gRPC, Git, MLflow, Ray, AWS, GCP</li>
+                <li><strong>Databases:</strong> ChromaDB, MySQL, PostgreSQL, Dgraph, Neo4j, MongoDB</li>
             </ul>
-        </div>
+        </section>
 
-        <!-- Quick Links -->
-        <div class="retro-border">
-            <h3>Quick Access Terminal 💾</h3>
-            <table>
-                <tr>
-                    <th>Command</th>
-                    <th>Description</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td><a href="assets/resume.pdf" class="retro-button" target="_blank">DOWNLOAD_RESUME.exe</a></td>
-                    <td>Latest resume in PDF format</td>
-                    <td><span style="color: var(--text-primary);">✓ READY</span></td>
-                </tr>
-                <tr>
-                    <td><a href="experience.html" class="retro-button">VIEW_EXPERIENCE.html</a></td>
-                    <td>Professional work history</td>
-                    <td><span style="color: var(--text-primary);">✓ READY</span></td>
-                </tr>
-                <tr>
-                    <td><a href="projects.html" class="retro-button">LIST_PROJECTS.exe</a></td>
-                    <td>Technical projects showcase</td>
-                    <td><span style="color: var(--text-primary);">✓ READY</span></td>
-                </tr>
-                <tr>
-                    <td><a href="travel.html" class="retro-button">EXPLORE_TRAVELS.html</a></td>
-                    <td>Travel blog and adventures</td>
-                    <td><span style="color: var(--warning);">⚠ BETA</span></td>
-                </tr>
-            </table>
-        </div>
-
-        <!-- Under Construction -->
-        <div class="under-construction animate-blink">
-            🚧 This site is under construction! New features coming soon! 🚧
-        </div>
-
-        <!-- Footer -->
-        <div class="footer">
-            <p>© 2024 Rohan Surana | Last Updated: December 2024</p>
-            <p>Best viewed in 1024x768 resolution with 256 colors</p>
-            <p>This site is <span class="animate-neon">100% JavaScript Enhanced</span> and <span class="hover-glow">Y2K Compliant</span></p>
-            <div style="margin-top: 10px; font-size: 10px;">
-                <a href="mailto:rohansurana2810@gmail.com" class="hover-glow">📧 EMAIL</a> | 
-                <a href="https://www.linkedin.com/in/~rsurana/" class="hover-glow">💼 LINKEDIN</a> | 
-                <a href="https://github.com/rohan2810" class="hover-glow">💻 GITHUB</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Simple JavaScript for visitor counter and effects -->
-    <script src="js/script.js"></script>
+        <footer style="margin-top: 60px; color: #777; font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 20px;">
+            <p>© 2024-2025 Rohan Surana. Inspired by Shirley Wu's website.</p>
+        </footer>
+    </main>
 </body>
 </html>
+

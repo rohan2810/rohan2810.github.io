@@ -102,7 +102,6 @@ Optimized for modern browsers while maintaining that classic 90's feel:
 - Safari 13+
 - Edge 80+
 
-*Note: Best viewed in 1024x768 resolution with 256 colors for the full retro experience!*
 
 ## 🚀 Deployment
 

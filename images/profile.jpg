@@ -20,7 +20,7 @@
   
   <!-- Profile text -->
   <text x="100" y="140" font-family="Courier New, monospace" font-size="12" fill="#00ff00" text-anchor="middle" font-weight="bold">ROHAN SURANA</text>
-  <text x="100" y="155" font-family="Courier New, monospace" font-size="10" fill="#00ffff" text-anchor="middle">AI RESEARCH ENGINEER</text>
+  <text x="100" y="155" font-family="Courier New, monospace" font-size="10" fill="#00ffff" text-anchor="middle">AI RESEARCH INTERN</text>
   <text x="100" y="170" font-family="Courier New, monospace" font-size="8" fill="#ffff00" text-anchor="middle">DELL TECHNOLOGIES</text>
   
   <!-- Retro border effect -->
