@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohan Surana | AI Researcher</title>
+    <title>Rohan Surana</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Rohan Surana - Master's student in Data Science at UC San Diego, advised by Prof. Julian McAuley. Research in preference optimization, information retrieval, and multimodal learning. Collaborating with Adobe and Netflix.">
+    <meta name="keywords" content="Rohan Surana, AI Research, Machine Learning, LLM, UCSD, Data Science, Preference Optimization, Multimodal Learning">
+    <meta name="author" content="Rohan Surana">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Rohan Surana | AI Researcher">
+    <meta property="og:description" content="Master's student in Data Science at UC San Diego. Research in preference optimization, information retrieval, and multimodal learning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rohan2810.github.io">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@RohanSurana12">
+    <meta name="twitter:title" content="Rohan Surana | AI Researcher">
+    <meta name="twitter:description" content="Master's student in Data Science at UC San Diego. Research in preference optimization, information retrieval, and multimodal learning.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/rohan-profile.png">
+    
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -20,12 +41,11 @@
     <!-- Sidebar -->
     <aside class="sidebar">
         <img src="images/rohan-profile.png" alt="Rohan Surana" class="profile-img">
+        <h2 class="sidebar-name">Rohan Surana</h2>
         
         <nav class="nav-menu">
             <a href="#about" class="nav-item">About Me</a>
-            <a href="#research" class="nav-item">Research Topics</a>
             <a href="#experience" class="nav-item">Experience</a>
-            <a href="#teaching" class="nav-item">Teaching</a>
             <a href="#education" class="nav-item">Education</a>
             <a href="#projects" class="nav-item">Projects</a>
             <a href="#skills" class="nav-item">Technical Skills</a>
@@ -36,9 +56,10 @@
             <a href="https://github.com/rohan2810" class="social-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://linkedin.com/in/rohansurana28/" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="https://scholar.google.com/citations?user=hobIUIcAAAAJ&hl=en&oi=ao" class="social-link" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://x.com/RohanSurana12" class="social-link" target="_blank" title="Twitter/X"><i class="fab fa-twitter"></i></a>
             <a href="mailto:rsurana@ucsd.edu" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
-        <div style="margin-top: 15px; color: rgba(255,255,255,0.7); font-size: 0.8rem; text-align: center;">
+        <div style="margin-top: 15px; color: rgba(255,255,255,0.9); font-size: 1rem; text-align: center; font-weight: 500;">
             rsurana@ucsd.edu
         </div>
     </aside>
@@ -117,7 +138,7 @@
                         <div class="paper-content">
                             <div class="paper-title">MASS-DPO: Multi-Negative Active Sample Selection for Direct Policy Optimization</div>
                             <div class="paper-authors"><strong>Rohan Surana*</strong>, J. Wu*, X. Li, Y. Shen, C. Wang, T. Yu, P. Ammanabrolu, J. Shang, J. McAuley</div>
-                            <div class="paper-venue">Submitted</div>
+                            <div class="paper-venue">Under Review</div>
                             <p class="paper-desc">
                                 We cast multi-negative DPO under the Plackett-Luce model as a D-optimal design problem and develop a greedy, theoretically grounded selection strategy for informative negatives. This improves alignment efficiency and performance.
                             </p>
@@ -138,7 +159,8 @@
                                 We extend Direct Preference Optimization to ranking, allowing LLMs to learn from sparse, in-context listwise feedback and directly optimize differentiable surrogates of ranking metrics. This connects preference optimization with practical IR settings like conversational recommendation and generative retrieval.
                             </p>
                             <div style="margin-top: 5px;">
-                                <a href="https://arxiv.org/pdf/2504.15477" target="_blank" class="paper-link">[PDF]</a>
+                                <a href="https://arxiv.org/pdf/2504.15477" target="_blank" class="paper-link">Paper</a>
+                                <a href="https://github.com/rohan2810/In-context-Ranking-Preference-Optimization" target="_blank" class="paper-link" style="margin-left: 8px;">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -152,7 +174,7 @@
                         <div class="paper-content">
                             <div class="paper-title">Importance Sampling for Multi-Negative Multimodal Direct Preference Optimization (MISP-DPO)</div>
                             <div class="paper-authors">X. Li, C. Wang, J. Wu, <strong>Rohan Surana</strong>, T. Yu, J. McAuley, J. Shang</div>
-                            <div class="paper-venue">Submitted</div>
+                            <div class="paper-venue">Under Review</div>
                             <p class="paper-desc">
                                 We extend multi-negative DPO to the multimodal setting, using a CLIP+SAE-based sampler and importance sampling under a Plackett–Luce objective to select semantically diverse visual negatives. This substantially improves multimodal alignment and reduces hallucinations compared to single-negative multimodal DPO baselines.
                             </p>
@@ -168,7 +190,7 @@
                         <div class="paper-content">
                             <div class="paper-title">WS-GRPO: Weakly-Supervised Group-Relative Policy Optimization</div>
                             <div class="paper-authors">G. Mundada*, <strong>Rohan Surana*</strong>, J. Y. Zhang, X. Li, T. Yu, L. Yao, J. Shang, J. McAuley, J. Wu</div>
-                            <div class="paper-venue">Submitted</div>
+                            <div class="paper-venue">Under Review</div>
                             <p class="paper-desc">
                                 We address GRPO's dependence on dense step-wise rewards by learning to extract dense preference signals from sparse outcome supervision. WS-GRPO trains a preference model on trajectory-level outcomes, then leverages it to provide step-wise weakly-supervised rewards combined with terminal rewards during group-relative policy optimization. This enables effective reasoning model training without expensive step-by-step annotations.
                             </p>
@@ -208,7 +230,7 @@
                                 Joint work with Netflix where we design an active data augmentation framework that turns static domain data (reviews, metadata, collaborative signals) into synthetic conversations using black-box LLMs, enabling smaller in-house CRS models to operate in true zero-/low-resource settings.
                             </p>
                             <div style="margin-top: 5px;">
-                                <a href="https://arxiv.org/pdf/2504.15476" target="_blank" class="paper-link">[PDF]</a>
+                                <a href="https://arxiv.org/pdf/2504.15476" target="_blank" class="paper-link">Paper</a>
                             </div>
                         </div>
                     </div>
@@ -222,12 +244,13 @@
                         <div class="paper-content">
                             <div class="paper-title">MusiCRS: Benchmarking Audio-Centric Conversational Recommendation</div>
                             <div class="paper-authors"><strong>Rohan Surana*</strong>, A. Namburi*, G. Mundada*, A. Lal*, Z. Novack, J. McAuley, J. Wu</div>
-                            <div class="paper-venue">Submitted</div>
+                            <div class="paper-venue">Under Review</div>
                             <p class="paper-desc">
                                 We build the first benchmark that ties real conversational queries to actual music tracks, enabling evaluation across audio-only, text-only, and audio+text settings. This exposes how current CRS models over-rely on text and struggle with nuanced audio reasoning.
                             </p>
                             <div style="margin-top: 5px;">
-                                <a href="https://arxiv.org/pdf/2509.19469" target="_blank" class="paper-link">[PDF]</a>
+                                <a href="https://arxiv.org/pdf/2509.19469" target="_blank" class="paper-link">Paper</a>
+                                <a href="https://github.com/rohan2810/MusiCRS" target="_blank" class="paper-link" style="margin-left: 8px;">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -249,7 +272,7 @@
                                 We propose an information-theoretic framework (via a concept bottleneck and mutual-information-style measures) to make MLLMs more traceable: quantifying how much visual information is retained, transformed, or discarded as it flows through the model under different textual instructions.
                             </p>
                             <div style="margin-top: 5px;">
-                                <a href="https://openreview.net/pdf?id=pQm66IPmeE" target="_blank" class="paper-link">[PDF]</a>
+                                <a href="https://openreview.net/pdf?id=pQm66IPmeE" target="_blank" class="paper-link">Paper</a>
                             </div>
                         </div>
                     </div>
@@ -268,7 +291,7 @@
                                 We formulate image difference captioning as a preference-optimization problem and introduce an adversarial hard-negative retriever plus DPO-style training to better capture fine-grained visual differences. This combines multimodal reasoning with preference-based training.
                             </p>
                             <div style="margin-top: 5px;">
-                                <a href="https://aclanthology.org/2025.emnlp-main.1713.pdf" target="_blank" class="paper-link">[PDF]</a>
+                                <a href="https://aclanthology.org/2025.emnlp-main.1713.pdf" target="_blank" class="paper-link">Paper</a>
                             </div>
                         </div>
                     </div>
@@ -282,7 +305,7 @@
                         <div class="paper-content">
                             <div class="paper-title">AMPS: Adaptive Modality Preference Steering via Functional Entropy</div>
                             <div class="paper-authors">Z. Huang, X. Li, J. Wu, <strong>Rohan Surana</strong>, T. Yu, R. Wang, J. McAuley, J. Shang</div>
-                            <div class="paper-venue">Submitted</div>
+                            <div class="paper-venue">Under Review</div>
                             <p class="paper-desc">
                                 We study modality preference in MLLMs (e.g., over-reliance on text vs. images) and propose an entropy-based diagnostic plus a sample-wise steering mechanism that adjusts steering intensity per input to avoid generation collapse while still shifting modality usage in a controlled way.
                             </p>
@@ -489,13 +512,67 @@
         <!-- Skills Section -->
         <section id="skills">
             <h2>Technical Skills</h2>
-            <ul class="skills-list">
-                <li><strong>Languages:</strong> Python, Golang, Java, Scala, SQL</li>
-                <li><strong>ML/DL:</strong> PyTorch, TensorFlow, scikit-learn, Transformers, OpenCV, NumPy, Pandas</li>
-                <li><strong>LLM/NLP:</strong> LangGraph, LangChain, vLLM, Unsloth, CrewAI, Hugging Face</li>
-                <li><strong>Infrastructure:</strong> Kubernetes, Docker, FastAPI, Spark, gRPC, Git, MLflow, Ray, AWS, GCP</li>
-                <li><strong>Databases:</strong> ChromaDB, MySQL, PostgreSQL, Dgraph, Neo4j, MongoDB</li>
-            </ul>
+            <div class="skills-section">
+                <div class="skill-category">
+                    <div class="skill-category-title"><i class="fas fa-code"></i> Languages</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Golang</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Scala</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title"><i class="fas fa-brain"></i> ML / Deep Learning</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Pandas</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title"><i class="fas fa-robot"></i> LLM / NLP</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">LangGraph</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">vLLM</span>
+                        <span class="skill-tag">Unsloth</span>
+                        <span class="skill-tag">CrewAI</span>
+                        <span class="skill-tag">Hugging Face</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title"><i class="fas fa-server"></i> Infrastructure</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Spark</span>
+                        <span class="skill-tag">gRPC</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">MLflow</span>
+                        <span class="skill-tag">Ray</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">GCP</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title"><i class="fas fa-database"></i> Databases</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ChromaDB</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Dgraph</span>
+                        <span class="skill-tag">Neo4j</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <footer style="margin-top: 60px; color: #777; font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 20px;">
@@ -519,6 +596,34 @@
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.className += " active";
         }
+
+        // Active nav highlighting on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navItems = document.querySelectorAll('.nav-item[href^="#"]');
+            
+            function highlightNav() {
+                let scrollY = window.pageYOffset;
+                
+                sections.forEach(section => {
+                    const sectionHeight = section.offsetHeight;
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        navItems.forEach(item => {
+                            item.classList.remove('active');
+                            if (item.getAttribute('href') === '#' + sectionId) {
+                                item.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', highlightNav);
+            highlightNav(); // Run on page load
+        });
     </script>
 </body>
 </html>
