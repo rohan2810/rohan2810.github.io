@@ -25,6 +25,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/rohan-profile.png">
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -49,7 +54,10 @@
             <a href="#education" class="nav-item">Education</a>
             <a href="#projects" class="nav-item">Projects</a>
             <a href="#skills" class="nav-item">Technical Skills</a>
-            <a href="assets/resume.pdf" class="nav-item" target="_blank">Resume / CV</a>
+            <div class="nav-docs">
+                <a href="assets/resume.pdf" class="doc-link" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+                <a href="assets/cv.pdf" class="doc-link" target="_blank"><i class="fas fa-file-pdf"></i> CV</a>
+            </div>
         </nav>
 
         <div class="social-links">
@@ -59,9 +67,7 @@
             <a href="https://x.com/RohanSurana12" class="social-link" target="_blank" title="Twitter/X"><i class="fab fa-twitter"></i></a>
             <a href="mailto:rsurana@ucsd.edu" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
-        <div style="margin-top: 15px; color: rgba(255,255,255,0.9); font-size: 1rem; text-align: center; font-weight: 500;">
-            rsurana@ucsd.edu
-        </div>
+        <div class="sidebar-email">rsurana@ucsd.edu</div>
     </aside>
 
     <!-- Main Content -->
@@ -69,16 +75,16 @@
         <!-- About Section -->
         <section id="about" class="bio-section">
             <h1>Rohan Surana</h1>
-            <p class="subtitle">Masters Student in Data Science @ UCSD</p>
             
             <p>
                 I am a Master's student in Data Science at the <strong>University of California, San Diego (UCSD)</strong>, 
-                advised by <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank">Prof. Julian McAuley</a>, also actively collaborating with 
+                advised by <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank"><strong>Prof. Julian McAuley</strong></a>, also actively collaborating with 
                 <strong>Adobe</strong> and <strong>Netflix</strong>. I previously earned my B.S. in Software Engineering, summa cum laude, from 
-                <strong>San Jose State University</strong>.
+                <strong>San Jose State University</strong>, followed by 2.5 years as a Software Engineer at <strong>Dell Technologies</strong>, 
+                building backend, ML infrastructure and cloud orchestration.
             </p>
             <p>
-                My research spans <strong>preference optimization</strong>, <strong>information retrieval</strong>, and <strong>multimodal learning</strong>. 
+                My research spans <strong>post-training</strong> (preference optimization & alignment), <strong>information retrieval & recommender systems</strong>, and <strong>multimodal learning</strong>. 
                 I develop methods that help LLMs learn from sparse, structured feedback: pairwise preferences, ranked lists, and in-context signals. 
                 Recent work includes <a href="#llm">multi-negative DPO</a> with principled selection strategies, <a href="https://arxiv.org/pdf/2504.15477" target="_blank">in-context ranking objectives</a> for retrieval and recommendation, 
                 and <a href="https://aclanthology.org/2025.emnlp-main.1713.pdf" target="_blank">multimodal extensions</a> that reduce hallucinations. I also build practical systems like <a href="https://arxiv.org/pdf/2504.15476" target="_blank">active dialogue synthesis</a> for low-resource domains 
@@ -160,7 +166,7 @@
                             </p>
                             <div style="margin-top: 5px;">
                                 <a href="https://arxiv.org/pdf/2504.15477" target="_blank" class="paper-link">Paper</a>
-                                <a href="https://github.com/rohan2810/In-context-Ranking-Preference-Optimization" target="_blank" class="paper-link" style="margin-left: 8px;">GitHub</a>
+                                <a href="https://github.com/rohan2810/In-context-Ranking-Preference-Optimization" target="_blank" class="paper-link">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -250,7 +256,7 @@
                             </p>
                             <div style="margin-top: 5px;">
                                 <a href="https://arxiv.org/pdf/2509.19469" target="_blank" class="paper-link">Paper</a>
-                                <a href="https://github.com/rohan2810/MusiCRS" target="_blank" class="paper-link" style="margin-left: 8px;">GitHub</a>
+                                <a href="https://github.com/rohan2810/MusiCRS" target="_blank" class="paper-link">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -459,7 +465,7 @@
                     <div class="edu-details">
                         <p><strong>Masters of Science in Data Science</strong></p>
                         <p>GPA: 3.88/4.00</p>
-                        <p>Advisor: <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank">Prof. Julian McAuley</a></p>
+                        <p>Advisor: <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank"><strong>Prof. Julian McAuley</strong></a></p>
                     </div>
                 </div>
 
@@ -575,8 +581,8 @@
             </div>
         </section>
 
-        <footer style="margin-top: 60px; color: #777; font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 20px;">
-            <p>© 2024-2025 Rohan Surana. Inspired by <a href="https://cs.stanford.edu/~shirwu/" target="_blank">Shirley Wu's website</a>.</p>
+        <footer>
+            <p>© 2025 Rohan Surana. Inspired by <a href="https://cs.stanford.edu/~shirwu/" target="_blank">Shirley Wu's website</a>.</p>
         </footer>
     </main>
 
