@@ -50,10 +50,11 @@
         
         <nav class="nav-menu">
             <a href="#about" class="nav-item">About Me</a>
+            <a href="publications.html" class="nav-item">Publications</a>
             <a href="#experience" class="nav-item">Experience</a>
             <a href="#education" class="nav-item">Education</a>
             <a href="#projects" class="nav-item">Projects</a>
-            <a href="#skills" class="nav-item">Technical Skills</a>
+            <!-- <a href="#skills" class="nav-item">Technical Skills</a> -->
             <div class="nav-docs">
                 <a href="assets/resume.pdf" class="doc-link" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
                 <a href="assets/cv.pdf" class="doc-link" target="_blank"><i class="fas fa-file-pdf"></i> CV</a>
@@ -96,6 +97,10 @@
         <section id="news">
             <h2>What's New</h2>
             <ul class="updates-list">
+                <li class="update-item">
+                    <span class="update-date">[Apr 2026]</span>
+                     Our paper "Evaluating Language Model Pluralism through In-the-wild Crowd Discussions" was accepted to <strong>ACL 2026 (main)</strong>.
+                </li>
                 <li class="update-item">
                     <span class="update-date">[Jan 2026]</span>
                      Our paper "Importance Sampling for Multi-Negative Multimodal Direct Preference Optimization" was accepted to <strong>ICLR 2026</strong>.
@@ -144,6 +149,19 @@
 
             <!-- Tab Content: LLM -->
             <div id="llm" class="tab-content active">
+                <div class="paper-item">
+                    <div class="paper-row">
+                        <div class="paper-thumb">
+                            <img src="images/lm-pluralism.png" onerror="this.style.display='none'" alt="LM Pluralism" class="paper-img-thumb">
+                        </div>
+                        <div class="paper-content">
+                            <div class="paper-title">Evaluating Language Model Pluralism through In-the-wild Crowd Discussions</div>
+                            <div class="paper-authors">Gagan Mundada, <strong>Rohan Surana</strong>, Nandhini Swaminathan, Bodhisattwa Prasad Majumder, Junda Wu, Julian McAuley, Zhouhang Xie</div>
+                            <div class="paper-venue">ACL 2026 (main)</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="paper-item">
                     <div class="paper-row">
                         <div class="paper-thumb">
@@ -527,7 +545,7 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
+        <!-- Skills Section (temporarily hidden)
         <section id="skills">
             <h2>Technical Skills</h2>
             <div class="skills-section">
@@ -592,6 +610,7 @@
                 </div>
             </div>
         </section>
+        -->
 
         <footer>
             <p>© 2025 Rohan Surana. Inspired by <a href="https://cs.stanford.edu/~shirwu/" target="_blank">Shirley Wu's website</a>.</p>
