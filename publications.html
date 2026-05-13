@@ -71,7 +71,18 @@
 
         <footer>
             <p>© 2026 Rohan Surana. Inspired by <a href="https://cs.stanford.edu/~shirwu/" target="_blank">Shirley Wu's website</a>.</p>
+            <p class="last-updated">Last updated: <span id="last-updated">—</span></p>
         </footer>
     </main>
+
+    <script>
+        fetch('https://api.github.com/repos/rohan2810/rohan2810.github.io/commits?per_page=1')
+            .then(r => r.ok ? r.json() : Promise.reject(r.status))
+            .then(d => {
+                const date = new Date(d[0].commit.committer.date).toISOString().slice(0, 10);
+                document.getElementById('last-updated').textContent = date;
+            })
+            .catch(() => {});
+    </script>
 </body>
 </html>

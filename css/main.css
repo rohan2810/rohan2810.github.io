@@ -1120,6 +1120,12 @@ footer a {
     color: var(--primary);
 }
 
+footer .last-updated {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
 /* ===========================================
    MOBILE RESPONSIVENESS
    =========================================== */
