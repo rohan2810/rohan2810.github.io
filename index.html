@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rohan Surana</title>
+
+    <!-- Set theme before first paint to avoid flash -->
+    <script>
+        (function() {
+            var stored = localStorage.getItem('theme');
+            var theme = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Rohan Surana - AI/ML Researcher at Qualcomm. Research in agents, post-training, preference optimization, information retrieval, and multimodal learning.">
+    <meta name="description" content="Rohan Surana - Research Scientist at Qualcomm. Research on proactive, personalized LLM agents, long-horizon context management and memory, RL post-training, and preference optimization.">
     <meta name="keywords" content="Rohan Surana, AI Research, Machine Learning, LLM, UCSD, Data Science, Preference Optimization, Multimodal Learning">
     <meta name="author" content="Rohan Surana">
-    
+
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Rohan Surana | AI Researcher">
-    <meta property="og:description" content="AI/ML Researcher at Qualcomm. Research in agents, post-training, preference optimization, information retrieval, and multimodal learning.">
+    <meta property="og:title" content="Rohan Surana | Research Scientist">
+    <meta property="og:description" content="Research Scientist at Qualcomm. Research on proactive, personalized LLM agents, long-horizon context management and memory, RL post-training, and preference optimization.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rohan2810.github.io">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@RohanSurana12">
-    <meta name="twitter:title" content="Rohan Surana | AI Researcher">
-    <meta name="twitter:description" content="AI/ML Researcher at Qualcomm. Research in agents, post-training, preference optimization, information retrieval, and multimodal learning.">
+    <meta name="twitter:title" content="Rohan Surana | Research Scientist">
+    <meta name="twitter:description" content="Research Scientist at Qualcomm. Research on proactive, personalized LLM agents, long-horizon context management and memory, RL post-training, and preference optimization.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/rohan-profile.png">
@@ -43,6 +52,26 @@
     </script>
 </head>
 <body>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+    <script>
+        (function() {
+            var btn = document.getElementById('theme-toggle');
+            var icon = btn.querySelector('i');
+            function updateIcon() {
+                icon.className = document.documentElement.getAttribute('data-theme') === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            }
+            updateIcon();
+            btn.addEventListener('click', function() {
+                var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+                updateIcon();
+            });
+        })();
+    </script>
+
     <!-- Sidebar -->
     <aside class="sidebar">
         <img src="images/rohan-profile.png" alt="Rohan Surana" class="profile-img">
@@ -79,7 +108,8 @@
             <h1>Rohan Surana</h1>
             
             <p>
-                I am an AI/ML Researcher at <strong>Qualcomm</strong>, working on <strong>agents</strong> and <strong>post-training</strong>.
+                I am a Research Scientist at <strong>Qualcomm</strong>, working on <strong>proactive, personalized LLM agents</strong> and
+                <strong>long-horizon context management and memory</strong>.
                 I recently completed my M.S. in Data Science at the <strong>University of California, San Diego (UCSD)</strong>,
                 advised by <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank"><strong>Prof. Julian McAuley</strong></a>, also actively collaborating with
                 <strong>Adobe</strong> and <strong>Netflix</strong>. I previously earned my B.S. in Software Engineering, summa cum laude, from
@@ -105,7 +135,7 @@
                 </li>
                 <li class="update-item">
                     <span class="update-date">[Apr 2026]</span>
-                     Joined <strong>Qualcomm</strong> as an AI/ML Researcher!
+                     Joined <strong>Qualcomm</strong> as a Research Scientist!
                 </li>
                 <li class="update-item">
                     <span class="update-date">[Apr 2026]</span>
@@ -172,6 +202,47 @@
                             <div class="paper-title">Evaluating Language Model Pluralism through In-the-wild Crowd Discussions</div>
                             <div class="paper-authors">Gagan Mundada, <strong>Rohan Surana</strong>, Nandhini Swaminathan, Bodhisattwa Prasad Majumder, Junda Wu, Julian McAuley, Zhouhang Xie</div>
                             <div class="paper-venue">ACL 2026 (main)</div>
+                            <div style="margin-top: 5px;">
+                                <a href="https://aclanthology.org/2026.acl-long.1957/" target="_blank" class="paper-link">Paper</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-row">
+                        <div class="paper-thumb">
+                            <img src="images/rrpo.png" onerror="this.style.display='none'" alt="RRPO" class="paper-img-thumb">
+                        </div>
+                        <div class="paper-content">
+                            <div class="paper-title">RRPO: Reference-Relative Policy Optimization with Stratified Conditional Rollouts</div>
+                            <div class="paper-authors">Y. Xiong, X. Jiang, <strong>Rohan Surana</strong>, X. Li, S. Yu, N. L. Kuang, R. A. Rossi, J. Shang, T. Yu, J. McAuley, J. Wu</div>
+                            <div class="paper-venue">Preprint</div>
+                            <p class="paper-desc">
+                                We extend GRPO beyond verifiable settings via reference-relative contrastive comparisons: stratified conditional rollouts build positive/negative reference sets, a metric projection head scores candidates against these anchors, and the resulting alignment scores serve as contrastive advantages during policy optimization &mdash; achieving competitive results without task verifiers.
+                            </p>
+                            <div style="margin-top: 5px;">
+                                <a href="https://arxiv.org/abs/2607.18470" target="_blank" class="paper-link">Paper</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-row">
+                        <div class="paper-thumb">
+                            <img src="images/sophia.png" onerror="this.style.display='none'" alt="SOPHIA" class="paper-img-thumb">
+                        </div>
+                        <div class="paper-content">
+                            <div class="paper-title">Can We Break LLMs Out of Self-Loops? Fine-Grained Reasoning Control with Activation Steering</div>
+                            <div class="paper-authors">S. Yu, T. Yu, X. Jiang, <strong>Rohan Surana</strong>, G. Mundada, S. Kim, L. Yao, J. McAuley, J. Wu</div>
+                            <div class="paper-venue">Preprint</div>
+                            <p class="paper-desc">
+                                We introduce SOPHIA, which treats reasoning traces as sequences of latent states and uses steering vectors to detect when LLMs fall into repetitive reasoning loops and redirect them toward productive paths at inference time, improving both accuracy and token efficiency.
+                            </p>
+                            <div style="margin-top: 5px;">
+                                <a href="https://arxiv.org/abs/2607.18100" target="_blank" class="paper-link">Paper</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -468,8 +539,8 @@
                         <div class="role-item">
                             <div class="timeline-date">Apr 2026 – Present</div>
                             <div class="timeline-content">
-                                <h4 class="role-title">AI/ML Researcher | San Diego, CA</h4>
-                                <p class="exp-summary">Working on agents and post-training for large language models.</p>
+                                <h4 class="role-title">Research Scientist | San Diego, CA</h4>
+                                <p class="exp-summary">Research on proactive agents and long-range context management to improve agentic capabilities.</p>
                             </div>
                         </div>
                     </div>

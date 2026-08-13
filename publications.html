@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications | Rohan Surana</title>
 
+    <!-- Set theme before first paint to avoid flash -->
+    <script>
+        (function() {
+            var stored = localStorage.getItem('theme');
+            var theme = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
     <meta name="description" content="Full publications list for Rohan Surana.">
     <meta name="author" content="Rohan Surana">
 
@@ -16,6 +25,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+    <script>
+        (function() {
+            var btn = document.getElementById('theme-toggle');
+            var icon = btn.querySelector('i');
+            function updateIcon() {
+                icon.className = document.documentElement.getAttribute('data-theme') === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            }
+            updateIcon();
+            btn.addEventListener('click', function() {
+                var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+                updateIcon();
+            });
+        })();
+    </script>
+
     <aside class="sidebar">
         <img src="images/rohan-profile.png" alt="Rohan Surana" class="profile-img">
         <h2 class="sidebar-name">Rohan Surana</h2>
@@ -44,7 +73,7 @@
             <h1>Publications</h1>
             <h2>2026</h2>
             <ul>
-                <li><strong>Evaluating Language Model Pluralism through In-the-wild Crowd Discussions</strong><br>Gagan Mundada, <strong>Rohan Surana</strong>, Nandhini Swaminathan, Bodhisattwa Prasad Majumder, Junda Wu, Julian McAuley, Zhouhang Xie<br><em>ACL 2026 (main)</em></li>
+                <li><strong>Evaluating Language Model Pluralism through In-the-wild Crowd Discussions</strong><br>Gagan Mundada, <strong>Rohan Surana</strong>, Nandhini Swaminathan, Bodhisattwa Prasad Majumder, Junda Wu, Julian McAuley, Zhouhang Xie<br><em>ACL 2026 (main)</em><br><a href="https://aclanthology.org/2026.acl-long.1957/" target="_blank">paper</a></li>
                 <li><strong>Importance Sampling for Multi-Negative Multimodal Direct Preference Optimization (MISP-DPO)</strong><br>Xintong Li, Chuhan Wang, Junda Wu, <strong>Rohan Surana</strong>, Tong Yu, Julian McAuley, Jingbo Shang<br><em>International Conference on Learning Representations (ICLR 2026)</em></li>
                 <li><strong>MusiCRS: Benchmarking Audio-Centric Conversational Recommendation</strong><br><strong>Rohan Surana*</strong>, Amit Namburi*, Gagan Mundada*, Abhay Lal*, Zachary Novack, Julian McAuley, Junda Wu<br><em>International Conference on Acoustics Speech and Signal Processing (ICASSP 2026)</em><br><a href="https://arxiv.org/pdf/2509.19469" target="_blank">paper</a></li>
                 <li><strong>WS-GRPO: Weakly-Supervised Group-Relative Policy Optimization for Rollout-Efficient Reasoning</strong><br>Gagan Mundada*, Zihan Huang*, <strong>Rohan Surana*</strong>, Sheldon Yu, Jennifer Yuntong Zhang, Xintong Li, Tong Yu, Lina Yao, Jingbo Shang, Julian McAuley, Junda Wu<br><em>International Conference on Machine Learning (ICML 2026)</em><br><a href="https://arxiv.org/abs/2602.17025" target="_blank">paper</a></li>
@@ -59,6 +88,8 @@
 
             <h2>Under Review / Survey</h2>
             <ul>
+                <li><strong>RRPO: Reference-Relative Policy Optimization with Stratified Conditional Rollouts</strong><br>Y. Xiong, X. Jiang, <strong>Rohan Surana</strong>, X. Li, S. Yu, N. L. Kuang, R. A. Rossi, J. Shang, T. Yu, J. McAuley, J. Wu<br><em>Preprint</em><br><a href="https://arxiv.org/abs/2607.18470" target="_blank">paper</a></li>
+                <li><strong>Can We Break LLMs Out of Self-Loops? Fine-Grained Reasoning Control with Activation Steering</strong><br>S. Yu, T. Yu, X. Jiang, <strong>Rohan Surana</strong>, G. Mundada, S. Kim, L. Yao, J. McAuley, J. Wu<br><em>Preprint</em><br><a href="https://arxiv.org/abs/2607.18100" target="_blank">paper</a></li>
                 <li><strong>MASS-DPO: Multi-Negative Active Sample Selection for Direct Policy Optimization</strong><br><strong>Rohan Surana*</strong>, X. Li, S. Yu, Y. J. Shen, C. Wang, T. Yu, P. Ammanabrolu, J. Shang, J. McAuley, J. Wu<br><em>Under Review</em><br><a href="https://arxiv.org/abs/2605.10784" target="_blank">paper</a></li>
                 <li><strong>F-GRPO: Factorized Group-Relative Policy Optimization for Unified Candidate Generation and Ranking</strong><br><strong>Rohan Surana</strong>, G. Mundada, J. Wu, X. Li, Y. Jiao, B. Jin, S. Zhou, T. Yu, R. Sinha, J. Han, J. Shang, J. McAuley<br><em>Under Review</em><br><a href="https://arxiv.org/abs/2605.12995" target="_blank">paper</a></li>
                 <li><strong>Skill-R1: Agent Skill Evolution via Reinforcement Learning</strong><br>Y. Vishe, <strong>Rohan Surana</strong>, X. Jiang, Z. Huang, X. Li, N. L. Kuang, T. Yu, R. A. Rossi, J. Shang, J. McAuley, J. Wu<br><em>Under Review</em><br><a href="https://arxiv.org/abs/2605.09359" target="_blank">paper</a></li>
