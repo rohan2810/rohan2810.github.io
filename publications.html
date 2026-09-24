@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/redesign.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -48,38 +49,27 @@
         })();
     </script>
 
-    <aside class="sidebar">
-        <a href="index.html#about" class="profile-home" aria-label="Rohan Surana, back to home">
-            <img src="images/rohan-profile.png" alt="" class="profile-img">
-            <span class="profile-identity"><span class="sidebar-name">Rohan Surana</span><span class="sidebar-role">Research Scientist</span></span>
-        </a>
-
-        <nav class="nav-menu">
-            <a href="index.html#about" class="nav-item">About</a>
-            <a href="publications.html" class="nav-item active">Publications</a>
-            <a href="index.html#research" class="nav-item">Research</a>
-            <a href="index.html#experience" class="nav-item">Experience</a>
-            <div class="nav-docs">
-                <a href="assets/resume.pdf" class="doc-link" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
-                <a href="assets/cv.pdf" class="doc-link" target="_blank"><i class="fas fa-file-pdf"></i> CV</a>
-            </div>
-        </nav>
-
-        <div class="social-links">
-            <a href="https://github.com/rohan2810" class="social-link" target="_blank" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/rohansurana28/" class="social-link" target="_blank" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://scholar.google.com/citations?user=hobIUIcAAAAJ&hl=en&oi=ao" class="social-link" target="_blank" aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://x.com/RohanSurana12" class="social-link" target="_blank" aria-label="Twitter/X" title="Twitter/X"><i class="fab fa-twitter"></i></a>
-            <a href="mailto:rohansurana2810@gmail.com" class="social-link" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html#about" class="site-mark" aria-label="Rohan Surana, home"><span class="mark-symbol">R<span>·</span>S</span><span class="mark-name">Rohan Surana</span></a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="index.html#research" class="nav-item">Research</a>
+                <a href="publications.html" class="nav-item active">Publications</a>
+                <a href="index.html#experience" class="nav-item">Experience</a>
+                <a href="index.html#education" class="nav-item">Education</a>
+                <a href="index.html#service" class="nav-item">Service</a>
+            </nav>
+            <a href="mailto:rohansurana2810@gmail.com" class="header-contact">Let's connect <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="sidebar-email">rohansurana2810@gmail.com</div>
-    </aside>
+    </header>
 
     <main class="main-content">
         <section id="publications">
+            <div class="archive-hero">
             <span class="section-kicker">RESEARCH ARCHIVE</span>
             <h1>Publications</h1>
             <p class="section-intro">Papers and preprints across language model alignment, recommendation, and multimodal learning. <a href="index.html#research">Browse selected work →</a></p>
+            </div>
             <h2>2026</h2>
             <ul>
                 <li><strong>Evaluating Language Model Pluralism through In-the-wild Crowd Discussions</strong><br>Gagan Mundada, <strong>Rohan Surana</strong>, Nandhini Swaminathan, Bodhisattwa Prasad Majumder, Junda Wu, Julian McAuley, Zhouhang Xie<br><em>ACL 2026 (main)</em><br><a href="https://aclanthology.org/2026.acl-long.1957/" target="_blank">paper</a></li>

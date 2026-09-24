@@ -40,6 +40,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/redesign.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Google Analytics -->
@@ -75,57 +76,53 @@
         })();
     </script>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <a href="#about" class="profile-home" aria-label="Rohan Surana, back to introduction">
-            <img src="images/rohan-profile.png" alt="" class="profile-img">
-            <span class="profile-identity"><span class="sidebar-name">Rohan Surana</span><span class="sidebar-role">Research Scientist</span></span>
-        </a>
-        
-        <nav class="nav-menu">
-            <a href="#about" class="nav-item">About</a>
-            <a href="publications.html" class="nav-item">Publications</a>
-            <a href="#research" class="nav-item">Research</a>
-            <a href="#experience" class="nav-item">Experience</a>
-            <a href="#education" class="nav-item">Education</a>
-            <!-- <a href="#projects" class="nav-item">Projects</a> -->
-            <a href="#service" class="nav-item">Service</a>
-            <!-- <a href="#skills" class="nav-item">Technical Skills</a> -->
-            <div class="nav-docs">
-                <a href="assets/resume.pdf" class="doc-link" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
-                <a href="assets/cv.pdf" class="doc-link" target="_blank"><i class="fas fa-file-pdf"></i> CV</a>
-            </div>
-        </nav>
-
-        <div class="social-links">
-            <a href="https://github.com/rohan2810" class="social-link" target="_blank" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/rohansurana28/" class="social-link" target="_blank" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://scholar.google.com/citations?user=hobIUIcAAAAJ&hl=en&oi=ao" class="social-link" target="_blank" aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://x.com/RohanSurana12" class="social-link" target="_blank" aria-label="Twitter/X" title="Twitter/X"><i class="fab fa-twitter"></i></a>
-            <a href="mailto:rohansurana2810@gmail.com" class="social-link" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#about" class="site-mark" aria-label="Rohan Surana, home"><span class="mark-symbol">R<span>·</span>S</span><span class="mark-name">Rohan Surana</span></a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="#research" class="nav-item">Research</a>
+                <a href="publications.html" class="nav-item">Publications</a>
+                <a href="#experience" class="nav-item">Experience</a>
+                <a href="#education" class="nav-item">Education</a>
+                <a href="#service" class="nav-item">Service</a>
+            </nav>
+            <a href="mailto:rohansurana2810@gmail.com" class="header-contact">Let's connect <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="sidebar-email">rohansurana2810@gmail.com</div>
-    </aside>
+    </header>
 
     <!-- Main Content -->
     <main class="main-content">
         <!-- About Section -->
         <section id="about" class="bio-section">
-            <div class="hero-eyebrow"><span class="status-dot"></span> Research Scientist · Qualcomm AI Research</div>
-            <h1>Rohan Surana</h1>
-            <p class="hero-lead">Building AI agents that can remember, reason, and adapt.</p>
-            <div class="hero-links">
-                <a href="#research" class="hero-primary">Explore research <span aria-hidden="true">↗</span></a>
-                <a href="publications.html" class="hero-secondary">All publications <span aria-hidden="true">→</span></a>
-            </div>
-            
-            <p>
+            <div class="hero-copy">
+            <div class="hero-eyebrow"><span class="status-dot"></span> Research Scientist <span class="eyebrow-divider">/</span> Qualcomm AI Research</div>
+            <h1>Rohan Surana<span class="hero-period">.</span></h1>
+            <p class="hero-lead">Research on personalized language agents, recommendation, and learning from feedback.</p>
+            <p class="hero-intro">
                 I'm a Research Scientist at <strong>Qualcomm</strong>, working on <strong>proactive, personalized LLM agents</strong>
                 and <strong>long-horizon memory</strong>. I recently completed my M.S. in Data Science at
                 <strong>UC San Diego</strong>, advised by
                 <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank"><strong>Prof. Julian McAuley</strong></a>.
                 My research connects post-training, recommendation, and multimodal learning.
             </p>
+            <div class="hero-links">
+                <a href="#research" class="hero-primary">Explore my research <span aria-hidden="true">↗</span></a>
+                <a href="assets/cv.pdf" class="hero-secondary" target="_blank">Download CV <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="hero-social" aria-label="Profile links">
+                <a href="https://scholar.google.com/citations?user=hobIUIcAAAAJ&hl=en&oi=ao" target="_blank">Scholar ↗</a>
+                <a href="https://github.com/rohan2810" target="_blank">GitHub ↗</a>
+                <a href="https://linkedin.com/in/rohansurana28/" target="_blank">LinkedIn ↗</a>
+                <a href="mailto:rohansurana2810@gmail.com">Email ↗</a>
+            </div>
+            </div>
+            <div class="hero-visual">
+                <div class="portrait-frame"><img src="images/rohan-profile.png" alt="Portrait of Rohan Surana"></div>
+                <span class="visual-orbit orbit-one"></span><span class="visual-orbit orbit-two"></span>
+                <div class="visual-note"><span class="visual-note-num">CURRENTLY</span><span>Qualcomm AI Research<br>San Diego, California</span></div>
+            </div>
+        </section>
+        <section class="bio-detail" aria-label="About my work">
             <details class="bio-more">
                 <summary>More about my work <span aria-hidden="true">↓</span></summary>
             <p>
@@ -373,7 +370,8 @@
                                 We build the first benchmark that ties real conversational queries to actual music tracks, enabling evaluation across audio-only, text-only, and audio+text settings. This exposes how current CRS models over-rely on text and struggle with nuanced audio reasoning.
                             </p>
                             <div style="margin-top: 5px;">
-                                <a href="https://arxiv.org/pdf/2509.19469" target="_blank" class="paper-link">Paper</a>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/11462411/" target="_blank" class="paper-link">IEEE</a>
+                                <a href="https://arxiv.org/abs/2509.19469" target="_blank" class="paper-link">arXiv</a>
                                 <a href="https://github.com/rohan2810/MusiCRS" target="_blank" class="paper-link">GitHub</a>
                                 <a href="assets/MusiCRS_Poster_A0.pdf" target="_blank" class="paper-link">Poster</a>
                             </div>
