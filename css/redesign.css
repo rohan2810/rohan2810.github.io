@@ -77,15 +77,16 @@ a:hover { color: var(--primary-light); }
 .tab-btn:hover { background: none; color: var(--primary); }
 .tab-btn.active { background: none; color: var(--primary); box-shadow: inset 0 -1px var(--primary); font-weight: 600; }
 .tab-content { padding: 0; border: 0; background: none; }
-.paper-item { padding: 17px 0 18px; margin: 0; border: 0; border-bottom: 1px solid var(--border-light); border-radius: 0; background: none; box-shadow: none; }
+.paper-item { padding: 11px 0 12px; margin: 0; border: 0; border-bottom: 1px solid var(--border-light); border-radius: 0; background: none; box-shadow: none; }
 .paper-item:hover { background: none; transform: none; box-shadow: none; border-color: var(--border-light); }
 .paper-row { display: block; }
 .paper-thumb { display: none; }
-.paper-title { color: var(--text-primary); font: 600 1rem/1.4 var(--font-body); margin: 0 0 3px; }
-.paper-authors { color: var(--text-secondary); font-size: .83rem; line-height: 1.5; }
-.paper-venue { color: var(--text-muted); font-size: .83rem; font-weight: 400; letter-spacing: 0; text-transform: none; margin-top: 2px; }
+.paper-title { color: var(--text-primary); font: 600 1rem/1.35 var(--font-body); margin: 0 0 2px; }
+.paper-authors { color: var(--text-secondary); font-size: .83rem; line-height: 1.4; margin: 0 0 2px; }
+.paper-venue { display: inline; color: var(--text-muted); font-size: .83rem; font-weight: 400; letter-spacing: 0; text-transform: none; margin: 0 11px 0 0; }
 .paper-desc { display: none; }
-.paper-link { display: inline; padding: 0; margin: 0 9px 0 0; color: var(--primary); background: none; border: 0; border-radius: 0; font-size: .82rem; text-decoration: underline; }
+.paper-content > div[style*="margin-top"] { display: inline; margin: 0 !important; }
+.paper-link { display: inline; padding: 0; margin: 0 9px 0 0; color: var(--primary) !important; background: none; border: 0; border-radius: 0; font-size: .82rem; text-decoration: underline; }
 .paper-link:hover { color: var(--primary-light); background: none; transform: none; box-shadow: none; text-decoration: underline; }
 .paper-item[hidden] { display: none; }
 .more-papers { display: inline; width: auto; padding: 9px 0; margin: 5px 0 0; color: var(--primary); background: none; border: 0; border-radius: 0; font: 400 .86rem var(--font-body); text-decoration: underline; cursor: pointer; }
