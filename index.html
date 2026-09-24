@@ -60,7 +60,10 @@
             var btn = document.getElementById('theme-toggle');
             var icon = btn.querySelector('i');
             function updateIcon() {
-                icon.className = document.documentElement.getAttribute('data-theme') === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+                var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+                icon.className = dark ? 'fas fa-sun' : 'fas fa-moon';
+                btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+                btn.title = btn.getAttribute('aria-label');
             }
             updateIcon();
             btn.addEventListener('click', function() {
@@ -74,12 +77,15 @@
 
     <!-- Sidebar -->
     <aside class="sidebar">
-        <img src="images/rohan-profile.png" alt="Rohan Surana" class="profile-img">
-        <h2 class="sidebar-name">Rohan Surana</h2>
+        <a href="#about" class="profile-home" aria-label="Rohan Surana, back to introduction">
+            <img src="images/rohan-profile.png" alt="" class="profile-img">
+            <span class="profile-identity"><span class="sidebar-name">Rohan Surana</span><span class="sidebar-role">Research Scientist</span></span>
+        </a>
         
         <nav class="nav-menu">
-            <a href="#about" class="nav-item">About Me</a>
+            <a href="#about" class="nav-item">About</a>
             <a href="publications.html" class="nav-item">Publications</a>
+            <a href="#research" class="nav-item">Research</a>
             <a href="#experience" class="nav-item">Experience</a>
             <a href="#education" class="nav-item">Education</a>
             <!-- <a href="#projects" class="nav-item">Projects</a> -->
@@ -92,11 +98,11 @@
         </nav>
 
         <div class="social-links">
-            <a href="https://github.com/rohan2810" class="social-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/rohansurana28/" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://scholar.google.com/citations?user=hobIUIcAAAAJ&hl=en&oi=ao" class="social-link" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://x.com/RohanSurana12" class="social-link" target="_blank" title="Twitter/X"><i class="fab fa-twitter"></i></a>
-            <a href="mailto:rohansurana2810@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/rohan2810" class="social-link" target="_blank" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/rohansurana28/" class="social-link" target="_blank" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?user=hobIUIcAAAAJ&hl=en&oi=ao" class="social-link" target="_blank" aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://x.com/RohanSurana12" class="social-link" target="_blank" aria-label="Twitter/X" title="Twitter/X"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:rohansurana2810@gmail.com" class="social-link" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
         <div class="sidebar-email">rohansurana2810@gmail.com</div>
     </aside>
@@ -105,17 +111,23 @@
     <main class="main-content">
         <!-- About Section -->
         <section id="about" class="bio-section">
+            <div class="hero-eyebrow"><span class="status-dot"></span> Research Scientist · Qualcomm AI Research</div>
             <h1>Rohan Surana</h1>
+            <p class="hero-lead">Building AI agents that can remember, reason, and adapt.</p>
+            <div class="hero-links">
+                <a href="#research" class="hero-primary">Explore research <span aria-hidden="true">↗</span></a>
+                <a href="publications.html" class="hero-secondary">All publications <span aria-hidden="true">→</span></a>
+            </div>
             
             <p>
-                I am a Research Scientist at <strong>Qualcomm</strong>, working on <strong>proactive, personalized LLM agents</strong> and
-                <strong>long-horizon context management and memory</strong>.
-                I recently completed my M.S. in Data Science at the <strong>University of California, San Diego (UCSD)</strong>,
-                advised by <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank"><strong>Prof. Julian McAuley</strong></a>, also actively collaborating with
-                <strong>Adobe</strong> and <strong>Netflix</strong>. I previously earned my B.S. in Software Engineering, summa cum laude, from
-                <strong>San Jose State University</strong>, followed by 2.5 years as a Software Engineer at <strong>Dell Technologies</strong>,
-                building backend, ML infrastructure and cloud orchestration.
+                I'm a Research Scientist at <strong>Qualcomm</strong>, working on <strong>proactive, personalized LLM agents</strong>
+                and <strong>long-horizon memory</strong>. I recently completed my M.S. in Data Science at
+                <strong>UC San Diego</strong>, advised by
+                <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank"><strong>Prof. Julian McAuley</strong></a>.
+                My research connects post-training, recommendation, and multimodal learning.
             </p>
+            <details class="bio-more">
+                <summary>More about my work <span aria-hidden="true">↓</span></summary>
             <p>
                 My research spans <strong>post-training</strong> (preference optimization & alignment), <strong>information retrieval & recommender systems</strong>, and <strong>multimodal learning</strong>. 
                 I develop methods that help LLMs learn from sparse, structured feedback: pairwise preferences, ranked lists, and in-context signals. 
@@ -123,74 +135,14 @@
                 and <a href="https://aclanthology.org/2025.emnlp-main.1713.pdf" target="_blank">multimodal extensions</a> that reduce hallucinations. I also build practical systems like <a href="https://arxiv.org/pdf/2504.15476" target="_blank">active dialogue synthesis</a> for low-resource domains 
                 and <a href="https://arxiv.org/pdf/2509.19469" target="_blank">benchmarks for audio-centric recommendation</a>.
             </p>
-        </section>
-
-        <!-- What's New Section -->
-        <section id="news">
-            <h2>What's New</h2>
-            <ul class="updates-list">
-                <li class="update-item">
-                    <span class="update-date">[Sep 2026]</span>
-                     Our survey "Generate, Filter, Control, Replay: A Comprehensive Survey of Rollout Strategies for LLM Reinforcement Learning" was accepted to <strong>TMLR</strong>.
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[Aug 2026]</span>
-                     Our paper "An Empirical Study on Zero-Data Bootstrapping for Conversational Recommender Systems" was accepted to <strong>EMNLP 2026 (Findings)</strong>.
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[Apr 2026]</span>
-                     Our paper "WS-GRPO: Weakly-Supervised Group-Relative Policy Optimization for Rollout-Efficient Reasoning" was accepted to <strong>ICML 2026</strong>.
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[Apr 2026]</span>
-                     Joined <strong>Qualcomm</strong> as a Research Scientist!
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[Apr 2026]</span>
-                     Our paper "Evaluating Language Model Pluralism through In-the-wild Crowd Discussions" was accepted to <strong>ACL 2026 (main)</strong>.
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[Mar 2026]</span>
-                     Graduated with an M.S. in Data Science from <strong>UC San Diego</strong>!
-                </li>                
-                <li class="update-item">
-                    <span class="update-date">[Jan 2026]</span>
-                     Our paper "Importance Sampling for Multi-Negative Multimodal Direct Preference Optimization" was accepted to <strong>ICLR 2026</strong>.
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[Jan 2026]</span>
-                     Our paper "MusiCRS: Benchmarking Audio-Centric Conversational Recommendation" was accepted to <strong>ICASSP 2026</strong>.
-                </li>
-                 <li class="update-item">
-                    <span class="update-date">[Dec 2025]</span>
-                     Attending <strong>NeurIPS 2025</strong> in San Diego, CA.
-                </li>
-                 <li class="update-item">
-                    <span class="update-date">[Sep 2025]</span>
-                     Completed internship at Dell Technologies!
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[Jun 2025]</span>
-                     Joined <strong>Dell Technologies</strong> as an AI Research Intern in Hopkinton, MA.
-                </li>
-                 <li class="update-item">
-                    <span class="update-date">[May 2025]</span>
-                     Our paper "In-context Ranking Preference Optimization" was accepted to <strong>COLM 2025</strong>.
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[May 2025]</span>
-                     Our paper "Traceable and Explainable Multimodal LLMs" was accepted to <strong>COLM 2025</strong>.
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[May 2025]</span>
-                     Our paper "Image Difference Captioning via Adversarial Preference Optimization" was accepted to <strong>EMNLP 2025</strong>.
-                </li>
-            </ul>
+            <p>I have also collaborated with <strong>Adobe</strong> and <strong>Netflix</strong>. Before UC San Diego, I earned a B.S. in Software Engineering, summa cum laude, at <strong>San Jose State University</strong> and spent 2.5 years at <strong>Dell Technologies</strong> building backend, ML infrastructure, and cloud orchestration.</p>
+            </details>
         </section>
 
         <!-- Research Topics / Publications -->
         <section id="research">
-            <h2>Research Topics</h2>
+            <div class="section-heading"><div><span class="section-kicker">SELECTED WORK</span><h2>Research</h2></div><a href="publications.html" class="section-more">View all publications <span aria-hidden="true">→</span></a></div>
+            <p class="section-intro">Methods for learning from feedback, finding useful information, and making multimodal systems more reliable.</p>
             
             <!-- Tabs -->
             <div class="research-tabs">
@@ -530,6 +482,71 @@
             </div>
         </section>
 
+        <!-- What's New Section -->
+        <section id="news">
+            <h2>What's New</h2>
+            <ul class="updates-list">
+                <li class="update-item">
+                    <span class="update-date">[Sep 2026]</span>
+                     Our survey "Generate, Filter, Control, Replay: A Comprehensive Survey of Rollout Strategies for LLM Reinforcement Learning" was accepted to <strong>TMLR</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Aug 2026]</span>
+                     Our paper "An Empirical Study on Zero-Data Bootstrapping for Conversational Recommender Systems" was accepted to <strong>EMNLP 2026 (Findings)</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Apr 2026]</span>
+                     Our paper "WS-GRPO: Weakly-Supervised Group-Relative Policy Optimization for Rollout-Efficient Reasoning" was accepted to <strong>ICML 2026</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Apr 2026]</span>
+                     Joined <strong>Qualcomm</strong> as a Research Scientist!
+                </li>
+            </ul>
+            <details class="news-archive"><summary>More updates <span aria-hidden="true">↓</span></summary><ul class="updates-list">
+                <li class="update-item">
+                    <span class="update-date">[Apr 2026]</span>
+                     Our paper "Evaluating Language Model Pluralism through In-the-wild Crowd Discussions" was accepted to <strong>ACL 2026 (main)</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Mar 2026]</span>
+                     Graduated with an M.S. in Data Science from <strong>UC San Diego</strong>!
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Jan 2026]</span>
+                     Our paper "Importance Sampling for Multi-Negative Multimodal Direct Preference Optimization" was accepted to <strong>ICLR 2026</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Jan 2026]</span>
+                     Our paper "MusiCRS: Benchmarking Audio-Centric Conversational Recommendation" was accepted to <strong>ICASSP 2026</strong>.
+                </li>
+                 <li class="update-item">
+                    <span class="update-date">[Dec 2025]</span>
+                     Attending <strong>NeurIPS 2025</strong> in San Diego, CA.
+                </li>
+                 <li class="update-item">
+                    <span class="update-date">[Sep 2025]</span>
+                     Completed internship at Dell Technologies!
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Jun 2025]</span>
+                     Joined <strong>Dell Technologies</strong> as an AI Research Intern in Hopkinton, MA.
+                </li>
+                 <li class="update-item">
+                    <span class="update-date">[May 2025]</span>
+                     Our paper "In-context Ranking Preference Optimization" was accepted to <strong>COLM 2025</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[May 2025]</span>
+                     Our paper "Traceable and Explainable Multimodal LLMs" was accepted to <strong>COLM 2025</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[May 2025]</span>
+                     Our paper "Image Difference Captioning via Adversarial Preference Optimization" was accepted to <strong>EMNLP 2025</strong>.
+                </li>
+            </ul></details>
+        </section>
+
         <!-- Experience Section -->
         <section id="experience">
             <h2>Experience</h2>
@@ -845,6 +862,22 @@
 
         // Active nav highlighting on scroll
         document.addEventListener('DOMContentLoaded', function() {
+            const llmPapers = [...document.querySelectorAll('#llm > .paper-item')];
+            if (llmPapers.length > 4) {
+                llmPapers.slice(4).forEach(paper => { paper.hidden = true; });
+                const more = document.createElement('button');
+                more.type = 'button';
+                more.className = 'more-papers';
+                more.textContent = `Show ${llmPapers.length - 4} more papers ↓`;
+                more.setAttribute('aria-expanded', 'false');
+                more.addEventListener('click', function() {
+                    const expanded = more.getAttribute('aria-expanded') === 'true';
+                    llmPapers.slice(4).forEach(paper => { paper.hidden = expanded; });
+                    more.setAttribute('aria-expanded', String(!expanded));
+                    more.textContent = expanded ? `Show ${llmPapers.length - 4} more papers ↓` : 'Show fewer papers ↑';
+                });
+                document.getElementById('llm').appendChild(more);
+            }
             const sections = document.querySelectorAll('section[id]');
             const navItems = document.querySelectorAll('.nav-item[href^="#"]');
             
