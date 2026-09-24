@@ -78,15 +78,14 @@
 
     <header class="site-header">
         <div class="header-inner">
-            <a href="#about" class="site-mark" aria-label="Rohan Surana, home"><span class="mark-symbol">R<span>·</span>S</span><span class="mark-name">Rohan Surana</span></a>
+            <a href="#about" class="site-mark" aria-label="Rohan Surana, home">Rohan Surana</a>
             <nav class="site-nav" aria-label="Main navigation">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#news" class="nav-item">News</a>
                 <a href="#research" class="nav-item">Research</a>
                 <a href="publications.html" class="nav-item">Publications</a>
-                <a href="#experience" class="nav-item">Experience</a>
-                <a href="#education" class="nav-item">Education</a>
-                <a href="#service" class="nav-item">Service</a>
+                <a href="assets/cv.pdf" class="nav-item" target="_blank">CV</a>
             </nav>
-            <a href="mailto:rohansurana2810@gmail.com" class="header-contact">Let's connect <span aria-hidden="true">↗</span></a>
         </div>
     </header>
 
@@ -95,51 +94,95 @@
         <!-- About Section -->
         <section id="about" class="bio-section">
             <div class="hero-copy">
-            <div class="hero-eyebrow"><span class="status-dot"></span> Research Scientist <span class="eyebrow-divider">/</span> Qualcomm AI Research</div>
-            <h1>Rohan Surana<span class="hero-period">.</span></h1>
-            <p class="hero-lead">Research on personalized language agents, recommendation, and learning from feedback.</p>
+            <h1>Rohan Surana</h1>
+            <p class="hero-role">Research Scientist, Qualcomm AI Research</p>
             <p class="hero-intro">
-                I'm a Research Scientist at <strong>Qualcomm</strong>, working on <strong>proactive, personalized LLM agents</strong>
-                and <strong>long-horizon memory</strong>. I recently completed my M.S. in Data Science at
-                <strong>UC San Diego</strong>, advised by
-                <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank"><strong>Prof. Julian McAuley</strong></a>.
-                My research connects post-training, recommendation, and multimodal learning.
+                I work on personalized language agents, long-horizon memory, and learning from feedback.
+                I recently completed an M.S. in Data Science at <strong>UC San Diego</strong>, where I worked with
+                <a href="https://cseweb.ucsd.edu/~jmcauley/" target="_blank">Prof. Julian McAuley</a>.
             </p>
-            <div class="hero-links">
-                <a href="#research" class="hero-primary">Explore my research <span aria-hidden="true">↗</span></a>
-                <a href="assets/cv.pdf" class="hero-secondary" target="_blank">Download CV <span aria-hidden="true">↗</span></a>
-            </div>
+            <p class="hero-intro">My research spans LLM post-training, recommendation, and multimodal learning. Before graduate school, I was a software engineer at Dell Technologies.</p>
             <div class="hero-social" aria-label="Profile links">
-                <a href="https://scholar.google.com/citations?user=hobIUIcAAAAJ&hl=en&oi=ao" target="_blank">Scholar ↗</a>
-                <a href="https://github.com/rohan2810" target="_blank">GitHub ↗</a>
-                <a href="https://linkedin.com/in/rohansurana28/" target="_blank">LinkedIn ↗</a>
-                <a href="mailto:rohansurana2810@gmail.com">Email ↗</a>
+                <a href="mailto:rohansurana2810@gmail.com">Email</a>
+                <a href="https://scholar.google.com/citations?user=hobIUIcAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+                <a href="https://github.com/rohan2810" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/rohansurana28/" target="_blank">LinkedIn</a>
+                <a href="assets/cv.pdf" target="_blank">CV</a>
             </div>
             </div>
-            <div class="hero-visual">
-                <div class="portrait-frame"><img src="images/rohan-profile.png" alt="Portrait of Rohan Surana"></div>
-                <span class="visual-orbit orbit-one"></span><span class="visual-orbit orbit-two"></span>
-                <div class="visual-note"><span class="visual-note-num">CURRENTLY</span><span>Qualcomm AI Research<br>San Diego, California</span></div>
-            </div>
+            <img src="images/rohan-profile.png" alt="Rohan Surana" class="intro-photo">
         </section>
-        <section class="bio-detail" aria-label="About my work">
-            <details class="bio-more">
-                <summary>More about my work <span aria-hidden="true">↓</span></summary>
-            <p>
-                My research spans <strong>post-training</strong> (preference optimization & alignment), <strong>information retrieval & recommender systems</strong>, and <strong>multimodal learning</strong>. 
-                I develop methods that help LLMs learn from sparse, structured feedback: pairwise preferences, ranked lists, and in-context signals. 
-                Recent work includes <a href="#llm">multi-negative DPO</a> with principled selection strategies, <a href="https://arxiv.org/pdf/2504.15477" target="_blank">in-context ranking objectives</a> for retrieval and recommendation, 
-                and <a href="https://aclanthology.org/2025.emnlp-main.1713.pdf" target="_blank">multimodal extensions</a> that reduce hallucinations. I also build practical systems like <a href="https://arxiv.org/pdf/2504.15476" target="_blank">active dialogue synthesis</a> for low-resource domains 
-                and <a href="https://arxiv.org/pdf/2509.19469" target="_blank">benchmarks for audio-centric recommendation</a>.
-            </p>
-            <p>I have also collaborated with <strong>Adobe</strong> and <strong>Netflix</strong>. Before UC San Diego, I earned a B.S. in Software Engineering, summa cum laude, at <strong>San Jose State University</strong> and spent 2.5 years at <strong>Dell Technologies</strong> building backend, ML infrastructure, and cloud orchestration.</p>
-            </details>
+
+        <!-- What's New Section -->
+        <section id="news">
+            <h2>What's New</h2>
+            <ul class="updates-list">
+                <li class="update-item">
+                    <span class="update-date">[Sep 2026]</span>
+                     Our survey "Generate, Filter, Control, Replay: A Comprehensive Survey of Rollout Strategies for LLM Reinforcement Learning" was accepted to <strong>TMLR</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Aug 2026]</span>
+                     Our paper "An Empirical Study on Zero-Data Bootstrapping for Conversational Recommender Systems" was accepted to <strong>EMNLP 2026 (Findings)</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Apr 2026]</span>
+                     Our paper "WS-GRPO: Weakly-Supervised Group-Relative Policy Optimization for Rollout-Efficient Reasoning" was accepted to <strong>ICML 2026</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Apr 2026]</span>
+                     Joined <strong>Qualcomm</strong> as a Research Scientist!
+                </li>
+            </ul>
+            <details class="news-archive"><summary>More updates <span aria-hidden="true">↓</span></summary><ul class="updates-list">
+                <li class="update-item">
+                    <span class="update-date">[Apr 2026]</span>
+                     Our paper "Evaluating Language Model Pluralism through In-the-wild Crowd Discussions" was accepted to <strong>ACL 2026 (main)</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Mar 2026]</span>
+                     Graduated with an M.S. in Data Science from <strong>UC San Diego</strong>!
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Jan 2026]</span>
+                     Our paper "Importance Sampling for Multi-Negative Multimodal Direct Preference Optimization" was accepted to <strong>ICLR 2026</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Jan 2026]</span>
+                     Our paper "MusiCRS: Benchmarking Audio-Centric Conversational Recommendation" was accepted to <strong>ICASSP 2026</strong>.
+                </li>
+                 <li class="update-item">
+                    <span class="update-date">[Dec 2025]</span>
+                     Attending <strong>NeurIPS 2025</strong> in San Diego, CA.
+                </li>
+                 <li class="update-item">
+                    <span class="update-date">[Sep 2025]</span>
+                     Completed internship at Dell Technologies!
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[Jun 2025]</span>
+                     Joined <strong>Dell Technologies</strong> as an AI Research Intern in Hopkinton, MA.
+                </li>
+                 <li class="update-item">
+                    <span class="update-date">[May 2025]</span>
+                     Our paper "In-context Ranking Preference Optimization" was accepted to <strong>COLM 2025</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[May 2025]</span>
+                     Our paper "Traceable and Explainable Multimodal LLMs" was accepted to <strong>COLM 2025</strong>.
+                </li>
+                <li class="update-item">
+                    <span class="update-date">[May 2025]</span>
+                     Our paper "Image Difference Captioning via Adversarial Preference Optimization" was accepted to <strong>EMNLP 2025</strong>.
+                </li>
+            </ul></details>
         </section>
+
 
         <!-- Research Topics / Publications -->
         <section id="research">
-            <div class="section-heading"><div><span class="section-kicker">SELECTED WORK</span><h2>Research</h2></div><a href="publications.html" class="section-more">View all publications <span aria-hidden="true">→</span></a></div>
-            <p class="section-intro">Methods for learning from feedback, finding useful information, and making multimodal systems more reliable.</p>
+            <div class="section-heading"><h2>Selected publications</h2><a href="publications.html" class="section-more">Full publication list</a></div>
+            <p class="section-intro">Selected papers grouped by research area.</p>
             
             <!-- Tabs -->
             <div class="research-tabs">
@@ -480,71 +523,6 @@
             </div>
         </section>
 
-        <!-- What's New Section -->
-        <section id="news">
-            <h2>What's New</h2>
-            <ul class="updates-list">
-                <li class="update-item">
-                    <span class="update-date">[Sep 2026]</span>
-                     Our survey "Generate, Filter, Control, Replay: A Comprehensive Survey of Rollout Strategies for LLM Reinforcement Learning" was accepted to <strong>TMLR</strong>.
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[Aug 2026]</span>
-                     Our paper "An Empirical Study on Zero-Data Bootstrapping for Conversational Recommender Systems" was accepted to <strong>EMNLP 2026 (Findings)</strong>.
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[Apr 2026]</span>
-                     Our paper "WS-GRPO: Weakly-Supervised Group-Relative Policy Optimization for Rollout-Efficient Reasoning" was accepted to <strong>ICML 2026</strong>.
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[Apr 2026]</span>
-                     Joined <strong>Qualcomm</strong> as a Research Scientist!
-                </li>
-            </ul>
-            <details class="news-archive"><summary>More updates <span aria-hidden="true">↓</span></summary><ul class="updates-list">
-                <li class="update-item">
-                    <span class="update-date">[Apr 2026]</span>
-                     Our paper "Evaluating Language Model Pluralism through In-the-wild Crowd Discussions" was accepted to <strong>ACL 2026 (main)</strong>.
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[Mar 2026]</span>
-                     Graduated with an M.S. in Data Science from <strong>UC San Diego</strong>!
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[Jan 2026]</span>
-                     Our paper "Importance Sampling for Multi-Negative Multimodal Direct Preference Optimization" was accepted to <strong>ICLR 2026</strong>.
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[Jan 2026]</span>
-                     Our paper "MusiCRS: Benchmarking Audio-Centric Conversational Recommendation" was accepted to <strong>ICASSP 2026</strong>.
-                </li>
-                 <li class="update-item">
-                    <span class="update-date">[Dec 2025]</span>
-                     Attending <strong>NeurIPS 2025</strong> in San Diego, CA.
-                </li>
-                 <li class="update-item">
-                    <span class="update-date">[Sep 2025]</span>
-                     Completed internship at Dell Technologies!
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[Jun 2025]</span>
-                     Joined <strong>Dell Technologies</strong> as an AI Research Intern in Hopkinton, MA.
-                </li>
-                 <li class="update-item">
-                    <span class="update-date">[May 2025]</span>
-                     Our paper "In-context Ranking Preference Optimization" was accepted to <strong>COLM 2025</strong>.
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[May 2025]</span>
-                     Our paper "Traceable and Explainable Multimodal LLMs" was accepted to <strong>COLM 2025</strong>.
-                </li>
-                <li class="update-item">
-                    <span class="update-date">[May 2025]</span>
-                     Our paper "Image Difference Captioning via Adversarial Preference Optimization" was accepted to <strong>EMNLP 2025</strong>.
-                </li>
-            </ul></details>
-        </section>
-
         <!-- Experience Section -->
         <section id="experience">
             <h2>Experience</h2>
@@ -836,7 +814,7 @@
         -->
 
         <footer>
-            <p>© 2026 Rohan Surana. Inspired by <a href="https://cs.stanford.edu/~shirwu/" target="_blank">Shirley Wu's website</a>.</p>
+            <p>© 2026 Rohan Surana.</p>
             <p class="last-updated">Last updated: <span id="last-updated">—</span></p>
         </footer>
     </main>
